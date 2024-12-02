@@ -1,34 +1,39 @@
 "use client";
 
-import { Inter } from 'next/font/google'
-import './globals.css'
-import Header from '@/components/header'
-import Footer from '@/components/footer'
-import Script from 'next/script'
+import { Inter } from 'next/font/google';
+import './globals.css';
+import Header from '@/components/header';
+import Footer from '@/components/footer';
+import Script from 'next/script';
 
-const inter = Inter({ subsets: ['latin'], display: 'swap' })
-
-
+const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet" />
-        <link href="https://fonts.cdnfonts.com/css/lequire-rounded" rel="stylesheet" />
+        {/* Favicon */}
+        <link rel="icon" href="/roundcon.png" type="image/x-icon" />
+        {/* Fonts */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.cdnfonts.com/css/lequire-rounded"
+          rel="stylesheet"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HollerLabs</title>
       </head>
       <body className={`${inter.className} bg-gray-50 text-gray-900 antialiased`}>
-        
-          <Header />
-          <main className="relative z-20 min-h-screen">
-            {children}
-          </main>
-          <Footer />
-        
+        <Header />
+        <main className="relative z-20 min-h-screen">{children}</main>
+        <Footer />
         <Script id="voiceflow-widget" strategy="afterInteractive">
           {`
             (function(d, t) {
@@ -46,6 +51,5 @@ export default function RootLayout({
         </Script>
       </body>
     </html>
-  )
+  );
 }
-
