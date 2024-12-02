@@ -9,37 +9,37 @@ export default function ServicesSection() {
       icon: <Briefcase className="w-12 h-12 text-primary" />,
       title: "Lead generation",
       description: "Scalable, affordable outbound & marketing systems to grow your company on autopilot.",
-      learnMoreUrl: "/services/lead-generation",
+      learnMoreUrl: "#",
     },
     {
       icon: <Clipboard className="w-12 h-12 text-primary" />,
       title: "Project management",
       description: "Trusted project management for 8-figure agencies and top SaaS leaders.",
-      learnMoreUrl: "/services/project-management",
+      learnMoreUrl: "#",
     },
     {
       icon: <LinkIcon className="w-12 h-12 text-primary" />,
       title: "Hiring systems",
       description: "Automated processes that source, contact, and evaluate candidates for you.",
-      learnMoreUrl: "/services/hiring-systems",
+      learnMoreUrl: "#",
     },
     {
       icon: <User className="w-12 h-12 text-primary" />,
       title: "Website Chatbots",
       description: "Streamline operations, delight customers, and cut costs with instant, automated solutions.",
-      learnMoreUrl: "/services/ai-service-fulfillment",
+      learnMoreUrl: "#",
     },
     {
       icon: <FileText className="w-12 h-12 text-primary" />,
       title: "CRM buildouts",
       description: "Sales systems to track, iterate, and scale growth just like industry-leading businesses.",
-      learnMoreUrl: "/services/crm-buildouts",
+      learnMoreUrl: "#",
     },
     {
       icon: <Settings className="w-12 h-12 text-primary" />,
       title: "SOPs & consultation",
       description: "Refine your offer, master proven strategies, and unlock custom SOPs designed for success.",
-      learnMoreUrl: "/services/sops-and-consultation",
+      learnMoreUrl: "#",
     },
   ]
 
