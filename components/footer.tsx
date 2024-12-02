@@ -18,16 +18,16 @@ export default function Footer() {
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
                 <li><Link href="#services" className="text-gray-400 hover:text-white transition-colors">Services</Link></li>
-                <li><Link href="#pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</Link></li>
-                <li><Link href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact Us</Link></li>
+                <li><Link href="/pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</Link></li>
+                <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact Us</Link></li>
               </ul>
             </div>
           )}
           <div>
             <h4 className="text-lg font-semibold mb-4">Legal</h4>
             <ul className="space-y-2">
-              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</Link></li>
+              <li><Link href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/termsofservice" className="text-gray-400 hover:text-white transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
         </div>

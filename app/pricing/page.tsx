@@ -13,21 +13,21 @@ export default function PricingSection() {
 
   const plans = [
     {
-      title: "AI Text Chatbots",
-      price: isAnnual ? "$2,700" : "$3,000",
+      title: "Regular Package",
+      price: isAnnual ? "1957$" : "$227",
       period: isAnnual ? "/year" : "/month",
       features: [
-        "Advanced Automations",
-        "Rigorous Testing",
+        "Custom Automations",
+        "Personalized ChatBots",
+        "CRM buildout",
+        "AI Lead Generation",  
         "24/7 Priority Support",
-        "Social Media Integrations",
-        "Latest AI Models",
       ],
       isPopular: false,
     },
     {
       title: "AI Voice Agents",
-      price: isAnnual ? "$3,600" : "$4,000",
+      price: isAnnual ? "$2957" : "$457",
       period: isAnnual ? "/year" : "/month",
       features: [
         "Advanced Automations",

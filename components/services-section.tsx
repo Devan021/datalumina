@@ -14,7 +14,7 @@ export default function ServicesSection() {
     {
       icon: <Clipboard className="w-12 h-12 text-primary" />,
       title: "Project management",
-      description: "Tailored project management systems trusted by leading 8-figure agencies and top-tier SaaS companies",
+      description: "Trusted project management for 8-figure agencies and top SaaS leaders.",
       learnMoreUrl: "/services/project-management",
     },
     {
@@ -38,7 +38,7 @@ export default function ServicesSection() {
     {
       icon: <Settings className="w-12 h-12 text-primary" />,
       title: "SOPs & consultation",
-      description: "We refine your offer, reveal strategies used by industry-leading businesses, and develop a comprehensive library of SOPs tailored to your needs.",
+      description: "Refine your offer, master proven strategies, and unlock custom SOPs designed for success.",
       learnMoreUrl: "/services/sops-and-consultation",
     },
   ]

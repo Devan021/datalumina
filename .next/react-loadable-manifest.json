@@ -1,9 +1,10 @@
 {
   "../app/page.tsx -> @/components/ai-agents-section": {
-    "id": 2505,
+    "id": 9234,
     "files": [
-      "static/chunks/144-d01f092657321195.js",
-      "static/chunks/505.191b97930172d0ef.js"
+      "static/chunks/336-7f19cafa29a82b32.js",
+      "static/chunks/985-acbdb5e72baae543.js",
+      "static/chunks/234.6b467f924f12da25.js"
     ]
   },
   "../app/page.tsx -> @/components/calendly-embed": {
@@ -15,7 +16,8 @@
   "../app/page.tsx -> @/components/faq-section": {
     "id": 431,
     "files": [
-      "static/chunks/144-d01f092657321195.js",
+      "static/chunks/336-7f19cafa29a82b32.js",
+      "static/chunks/985-acbdb5e72baae543.js",
       "static/chunks/478.5f67f5a3b0f1596f.js",
       "static/chunks/431.67914932569d3b8e.js"
     ]
@@ -23,39 +25,44 @@
   "../app/page.tsx -> @/components/features-section": {
     "id": 1362,
     "files": [
-      "static/chunks/144-d01f092657321195.js",
+      "static/chunks/336-7f19cafa29a82b32.js",
+      "static/chunks/985-acbdb5e72baae543.js",
       "static/chunks/362.1f94c40ab667f822.js"
     ]
   },
   "../app/page.tsx -> @/components/hero": {
     "id": 5911,
     "files": [
-      "static/chunks/144-d01f092657321195.js",
-      "static/chunks/17-eeed5d4bfe66a526.js",
-      "static/chunks/911.7cdeed63542a0e7e.js"
+      "static/chunks/336-7f19cafa29a82b32.js",
+      "static/chunks/985-acbdb5e72baae543.js",
+      "static/chunks/396-759834866dc62702.js",
+      "static/chunks/911.431b9ac4c611e1be.js"
     ]
   },
   "../app/page.tsx -> @/components/operations-section": {
     "id": 3278,
     "files": [
-      "static/chunks/144-d01f092657321195.js",
+      "static/chunks/336-7f19cafa29a82b32.js",
+      "static/chunks/985-acbdb5e72baae543.js",
       "static/chunks/278.ba4a593b9ee23c3f.js"
     ]
   },
   "../app/page.tsx -> @/components/services-section": {
     "id": 4053,
     "files": [
-      "static/chunks/144-d01f092657321195.js",
-      "static/chunks/17-eeed5d4bfe66a526.js",
-      "static/chunks/53.e49aae80d3afcba3.js"
+      "static/chunks/336-7f19cafa29a82b32.js",
+      "static/chunks/985-acbdb5e72baae543.js",
+      "static/chunks/396-759834866dc62702.js",
+      "static/chunks/53.a411670d0e20e3dd.js"
     ]
   },
   "../app/page.tsx -> @/components/typeform-automation-section": {
-    "id": 4966,
+    "id": 2027,
     "files": [
-      "static/chunks/144-d01f092657321195.js",
+      "static/chunks/336-7f19cafa29a82b32.js",
+      "static/chunks/985-acbdb5e72baae543.js",
       "static/chunks/478.5f67f5a3b0f1596f.js",
-      "static/chunks/966.7bf5addb55749f44.js"
+      "static/chunks/27.e5cdd838ff479c83.js"
     ]
   }
 }

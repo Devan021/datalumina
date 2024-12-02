@@ -5,19 +5,15 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button"
 import { Menu } from 'lucide-react'
+import { useScrollNavigation } from '@/hooks/useScrollNavigation'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { handleNavigation } = useScrollNavigation()
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
-    if (href.startsWith('/#')) {
-      const targetId = href.substring(2)
-      const targetElement = document.getElementById(targetId)
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: 'smooth' })
-      }
-    }
+    handleNavigation(href)
     setIsMenuOpen(false)
   }
 
@@ -30,8 +26,7 @@ export default function Header() {
           <Link href="/#services" className="px-4 py-2 hover:text-blue-600 transition-colors" onClick={(e) => handleNavClick(e, '/#services')}>Services</Link>
           <Link href="/#ai-agents" className="px-4 py-2 hover:text-blue-600 transition-colors" onClick={(e) => handleNavClick(e, '/#ai-agents')}>AI Agents</Link>
           <Link href="/#faq" className="px-4 py-2 hover:text-blue-600 transition-colors" onClick={(e) => handleNavClick(e, '/#faq')}>FAQ</Link>
-          <Link href="/pricing" className="px-4 py-2 hover:text-blue-600 transition-colors">Pricing</Link>
-
+          <Link href="/pricing" className="px-4 py-2 hover:text-blue-600 transition-colors" onClick={(e) => handleNavClick(e, '/pricing')}>Pricing</Link>
         </nav>
 
         <div className="flex items-center">
