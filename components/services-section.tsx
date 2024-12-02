@@ -14,7 +14,7 @@ export default function ServicesSection() {
     {
       icon: <Clipboard className="w-12 h-12 text-primary" />,
       title: "Project management",
-      description: "Bespoke project management systems used by 8-figure agencies & SaaS companies.",
+      description: "Tailored project management systems trusted by leading 8-figure agencies and top-tier SaaS companies",
       learnMoreUrl: "/services/project-management",
     },
     {
@@ -25,20 +25,20 @@ export default function ServicesSection() {
     },
     {
       icon: <User className="w-12 h-12 text-primary" />,
-      title: "AI service fulfillment",
-      description: "AI that automates key steps in your fulfillment process to reduce payroll.",
+      title: "Website Chatbots",
+      description: "Streamline operations, delight customers, and cut costs with instant, automated solutions.",
       learnMoreUrl: "/services/ai-service-fulfillment",
     },
     {
       icon: <FileText className="w-12 h-12 text-primary" />,
       title: "CRM buildouts",
-      description: "Sales systems to track, iterate, and scale growth just like an 8-figure company.",
+      description: "Sales systems to track, iterate, and scale growth just like industry-leading businesses.",
       learnMoreUrl: "/services/crm-buildouts",
     },
     {
       icon: <Settings className="w-12 h-12 text-primary" />,
       title: "SOPs & consultation",
-      description: "We'll help clarify your offer, show you what 8-figure companies are doing, and build you a library of SOPs.",
+      description: "We refine your offer, reveal strategies used by industry-leading businesses, and develop a comprehensive library of SOPs tailored to your needs.",
       learnMoreUrl: "/services/sops-and-consultation",
     },
   ]

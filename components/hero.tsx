@@ -57,7 +57,7 @@ export default function Hero() {
                 Revolutionize Your Business with <span className="text-gradient animate-gradient">AI-Powered Growth</span>
               </h1>
               <p className="mb-8 text-lg text-gray-600 sm:text-xl animate-fade-in">
-                Unlock the power of AI to automate your lead generation, streamline operations, and skyrocket your B2B growth to 8 figures and beyond.
+              Discover the perfect offer, automate lead acquisition, and streamline project management—all while scaling your business to 8 figures.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

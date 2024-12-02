@@ -12,8 +12,8 @@ import { Card, CardContent } from "@/components/ui/card"
 
 const faqs = [
   {
-    question: "What types of AI Agents do you offer?",
-    answer: "We offer both text-based chatbots and voice AI agents. Our chatbots can handle customer service, lead qualification, and sales processes, while our voice agents can manage phone calls, appointments, and complex conversations."
+    question: "What types of Services do you offer?",
+    answer: "We offer Personalized chatbots and Automation services. Our chatbots will be custom build to cater your business and requirements , while our automation services provide assistance for your lead generation."
   },
   {
     question: "How do you handle project timelines?",
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: "How often will I receive updates on the project?",
-    answer: "We provide weekly progress reports and maintain daily communication through your preferred channel (Slack, email, etc.). You'll have access to our project management system to track progress in real-time."
+    answer: "We provide daily progress reports and maintain daily communication through your preferred channel (Slack, email, etc). You’ll have an 24/7 open line where you can ask for the progress of your project."
   },
   {
     question: "What is your development process like?",

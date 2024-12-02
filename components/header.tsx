@@ -29,8 +29,9 @@ export default function Header() {
         <nav className={`md:flex ${isMenuOpen ? 'flex' : 'hidden'} flex-col md:flex-row absolute md:relative top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none`}>
           <Link href="/#services" className="px-4 py-2 hover:text-blue-600 transition-colors" onClick={(e) => handleNavClick(e, '/#services')}>Services</Link>
           <Link href="/#ai-agents" className="px-4 py-2 hover:text-blue-600 transition-colors" onClick={(e) => handleNavClick(e, '/#ai-agents')}>AI Agents</Link>
-          <Link href="/pricing" className="px-4 py-2 hover:text-blue-600 transition-colors">Pricing</Link>
           <Link href="/#faq" className="px-4 py-2 hover:text-blue-600 transition-colors" onClick={(e) => handleNavClick(e, '/#faq')}>FAQ</Link>
+          <Link href="/pricing" className="px-4 py-2 hover:text-blue-600 transition-colors">Pricing</Link>
+
         </nav>
 
         <div className="flex items-center">

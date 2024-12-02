@@ -116,7 +116,7 @@ export default function AIAgentsSection() {
                     </motion.div>
                     <h3 className="text-4xl font-bold mb-6">Supercharge Your Operations</h3>
                     <p className="text-xl mb-8 text-gray-300">
-                      Our AI agents work 24/7, handling tasks with precision and efficiency while you focus on strategic growth. Experience the future of business automation today.
+                    Our AI agents work 24/7, managing tasks with unmatched precision and efficiency. Focus on growth while we enhance automation and lead engagement.
                     </p>
                     <motion.div
                       whileHover={{ scale: 1.05 }}
