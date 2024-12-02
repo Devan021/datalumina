@@ -26,7 +26,7 @@ export default function PricingSection() {
       isPopular: false,
     },
     {
-      title: "AI Voice Agents",
+      title: "Custom Plan",
       price: isAnnual ? "$2957" : "$457",
       period: isAnnual ? "/year" : "/month",
       features: [
