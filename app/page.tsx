@@ -46,7 +46,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center mb-8">Book Your Free AI Strategy Call</h2>
             <CalendlyEmbed 
-              url="https://calendly.com/eswarsairam22/hollerlabs_free_discovery_call"
+              url="https://calendly.com/eswarsairam22/automate-your-dream"
               className="bg-white rounded-lg shadow-xl overflow-hidden"
             />
           </div>

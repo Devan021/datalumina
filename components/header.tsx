@@ -24,7 +24,7 @@ export default function Header() {
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
-        <Link href="/" className="text-2xl font-bold holler-labs-font">HOLLER LABS</Link>
+        <Link href="/" className="text-2xl font-bold holler-labs-font">hlabs</Link>
 
         <nav className={`md:flex ${isMenuOpen ? 'flex' : 'hidden'} flex-col md:flex-row absolute md:relative top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none`}>
           <Link href="/#services" className="px-4 py-2 hover:text-blue-600 transition-colors" onClick={(e) => handleNavClick(e, '/#services')}>Services</Link>
