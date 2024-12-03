@@ -719,9 +719,6 @@ video {
 .h-16 {
   height: 4rem;
 }
-.h-2 {
-  height: 0.5rem;
-}
 .h-20 {
   height: 5rem;
 }
@@ -757,6 +754,9 @@ video {
 }
 .h-px {
   height: 1px;
+}
+.h-2 {
+  height: 0.5rem;
 }
 .min-h-\[150px\] {
   min-height: 150px;
@@ -879,12 +879,6 @@ video {
 .justify-between {
   justify-content: space-between;
 }
-.gap-12 {
-  gap: 3rem;
-}
-.gap-2 {
-  gap: 0.5rem;
-}
 .gap-4 {
   gap: 1rem;
 }
@@ -893,6 +887,12 @@ video {
 }
 .gap-8 {
   gap: 2rem;
+}
+.gap-12 {
+  gap: 3rem;
+}
+.gap-2 {
+  gap: 0.5rem;
 }
 .gap-y-16 {
   row-gap: 4rem;
@@ -927,15 +927,15 @@ video {
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
-.space-y-4 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-}
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 .overflow-hidden {
   overflow: hidden;
@@ -1028,10 +1028,6 @@ video {
 .bg-destructive {
   background-color: hsl(var(--destructive));
 }
-.bg-gray-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
-}
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
@@ -1052,9 +1048,6 @@ video {
 .bg-primary\/10 {
   background-color: hsl(var(--primary) / 0.1);
 }
-.bg-primary\/90 {
-  background-color: hsl(var(--primary) / 0.9);
-}
 .bg-purple-500\/20 {
   background-color: rgb(168 85 247 / 0.2);
 }
@@ -1068,6 +1061,13 @@ video {
 .bg-yellow-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(250 204 21 / var(--tw-bg-opacity, 1));
+}
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
+}
+.bg-primary\/90 {
+  background-color: hsl(var(--primary) / 0.9);
 }
 .bg-\[url\(\/grid\.svg\)\] {
   background-image: url(/grid.svg);
@@ -1356,6 +1356,10 @@ video {
 .text-yellow-400 {
   --tw-text-opacity: 1;
   color: rgb(250 204 21 / var(--tw-text-opacity, 1));
+}
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
 }
 .underline-offset-4 {
   text-underline-offset: 4px;

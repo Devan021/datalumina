@@ -25,24 +25,37 @@ export default function TypeformAutomationSection() {
     role: "",
     industry: "",
   });
+  const [errors, setErrors] = useState<Partial<FormData>>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const totalSteps = 3;
 
-  const handleNext = () => {
-    if (step < totalSteps) {
-      setStep(step + 1);
+  const validateStep = (): boolean => {
+    const newErrors: Partial<FormData> = {};
+    if (step === 1) {
+      if (!formData.name.trim()) newErrors.name = "Name is required.";
+      if (!formData.email.trim() || !/\S+@\S+\.\S+/.test(formData.email))
+        newErrors.email = "A valid email is required.";
+    } else if (step === 2) {
+      if (!formData.company.trim()) newErrors.company = "Company name is required.";
+      if (!formData.role.trim()) newErrors.role = "Role is required.";
+    } else if (step === 3) {
+      if (!formData.industry.trim()) newErrors.industry = "Industry is required.";
     }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleNext = () => {
+    if (validateStep()) setStep(step + 1);
   };
 
   const handleBack = () => {
-    if (step > 1) {
-      setStep(step - 1);
-    }
+    setStep(step - 1);
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
+    if (!validateStep()) return;
 
     const webhookUrl = "https://hook.eu2.make.com/d6xp8kgjrbh5r7mld12fw2ksd3gg9o2q";
 
@@ -55,22 +68,29 @@ export default function TypeformAutomationSection() {
         body: JSON.stringify(formData),
       });
 
-      if (!response.ok) {
-        throw new Error("Failed to send data to the webhook");
-      }
+      if (!response.ok) throw new Error("Failed to send data to the webhook");
 
       console.log("Form data successfully sent to webhook:", formData);
-
       setIsSubmitted(true);
+
+      // Reset form after submission
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        role: "",
+        industry: "",
+      });
+
+      setTimeout(() => setIsSubmitted(false), 5000); // Hide popup after 5 seconds
     } catch (error) {
       console.error("Error sending form data to webhook:", error);
-    } finally {
-      setTimeout(() => setIsSubmitted(false), 5000); // Reset the popup after 5 seconds
     }
   };
 
   const updateFormData = (field: keyof FormData, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
+    setErrors((prev) => ({ ...prev, [field]: undefined })); // Clear error on input change
   };
 
   const formVariants = {
@@ -78,17 +98,9 @@ export default function TypeformAutomationSection() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: {
-        duration: 0.3,
-      },
+      transition: { duration: 0.3 },
     },
-    exit: {
-      opacity: 0,
-      x: 20,
-      transition: {
-        duration: 0.3,
-      },
-    },
+    exit: { opacity: 0, x: 20, transition: { duration: 0.3 } },
   };
 
   return (
@@ -105,166 +117,163 @@ export default function TypeformAutomationSection() {
             Experience Our <span className="text-gradient">Lead Nurturing Automation</span>
           </h2>
           <p className="mt-4 text-xl text-gray-600">
-            Fill out the form and see our automation in action
+            Fill out the form and see our automation in action.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Form Section */}
-          <div className="relative">
+          <div>
             <Card className="bg-white shadow-xl">
               <CardContent className="p-6">
-                <form onSubmit={handleSubmit}>
-                  <div className="mb-8 flex justify-between items-center">
-                    <div className="flex gap-2">
-                      {Array.from({ length: totalSteps }).map((_, i) => (
-                        <div
-                          key={i}
-                          className={`h-2 w-8 rounded-full transition-colors duration-300 ${
-                            i + 1 <= step ? "bg-primary" : "bg-gray-200"
-                          }`}
-                        />
-                      ))}
-                    </div>
-                    <span className="text-sm text-gray-500">
-                      Step {step} of {totalSteps}
-                    </span>
+                <div className="mb-8 flex justify-between items-center">
+                  <div className="flex gap-2">
+                    {Array.from({ length: totalSteps }).map((_, i) => (
+                      <div
+                        key={i}
+                        className={`h-2 w-8 rounded-full transition-colors ${
+                          i + 1 <= step ? "bg-primary" : "bg-gray-200"
+                        }`}
+                      />
+                    ))}
                   </div>
+                  <span className="text-sm text-gray-500">
+                    Step {step} of {totalSteps}
+                  </span>
+                </div>
 
-                  <AnimatePresence mode="wait">
-                    {step === 1 && (
-                      <motion.div
-                        key="step1"
-                        variants={formVariants}
-                        initial="hidden"
-                        animate="visible"
-                        exit="exit"
-                        className="space-y-4"
-                      >
-                        <div>
-                          <Label htmlFor="name">Full Name</Label>
-                          <Input
-                            id="name"
-                            value={formData.name}
-                            onChange={(e) => updateFormData("name", e.target.value)}
-                            placeholder="John Doe"
-                            required
-                            className="mt-1"
-                          />
-                        </div>
-                        <div>
-                          <Label htmlFor="email">Email</Label>
-                          <Input
-                            id="email"
-                            type="email"
-                            value={formData.email}
-                            onChange={(e) => updateFormData("email", e.target.value)}
-                            placeholder="john@example.com"
-                            required
-                            className="mt-1"
-                          />
-                        </div>
-                      </motion.div>
-                    )}
+                <AnimatePresence mode="wait">
+                  {step === 1 && (
+                    <motion.div
+                      key="step1"
+                      variants={formVariants}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      className="space-y-4"
+                    >
+                      <div>
+                        <Label htmlFor="name">Full Name</Label>
+                        <Input
+                          id="name"
+                          value={formData.name}
+                          onChange={(e) => updateFormData("name", e.target.value)}
+                          placeholder="John Doe"
+                          required
+                          className="mt-1"
+                        />
+                        {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
+                      </div>
+                      <div>
+                        <Label htmlFor="email">Email</Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          value={formData.email}
+                          onChange={(e) => updateFormData("email", e.target.value)}
+                          placeholder="john@example.com"
+                          required
+                          className="mt-1"
+                        />
+                        {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+                      </div>
+                    </motion.div>
+                  )}
 
-                    {step === 2 && (
-                      <motion.div
-                        key="step2"
-                        variants={formVariants}
-                        initial="hidden"
-                        animate="visible"
-                        exit="exit"
-                        className="space-y-4"
-                      >
-                        <div>
-                          <Label htmlFor="company">Company Name</Label>
-                          <Input
-                            id="company"
-                            value={formData.company}
-                            onChange={(e) => updateFormData("company", e.target.value)}
-                            placeholder="Acme Inc"
-                            required
-                            className="mt-1"
-                          />
-                        </div>
-                        <div>
-                          <Label htmlFor="role">Your Role</Label>
-                          <Input
-                            id="role"
-                            value={formData.role}
-                            onChange={(e) => updateFormData("role", e.target.value)}
-                            placeholder="CEO, Manager, etc."
-                            required
-                            className="mt-1"
-                          />
-                        </div>
-                      </motion.div>
-                    )}
+                  {step === 2 && (
+                    <motion.div
+                      key="step2"
+                      variants={formVariants}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      className="space-y-4"
+                    >
+                      <div>
+                        <Label htmlFor="company">Company Name</Label>
+                        <Input
+                          id="company"
+                          value={formData.company}
+                          onChange={(e) => updateFormData("company", e.target.value)}
+                          placeholder="Acme Inc"
+                          required
+                          className="mt-1"
+                        />
+                        {errors.company && <p className="text-red-500 text-sm">{errors.company}</p>}
+                      </div>
+                      <div>
+                        <Label htmlFor="role">Your Role</Label>
+                        <Input
+                          id="role"
+                          value={formData.role}
+                          onChange={(e) => updateFormData("role", e.target.value)}
+                          placeholder="CEO, Manager, etc."
+                          required
+                          className="mt-1"
+                        />
+                        {errors.role && <p className="text-red-500 text-sm">{errors.role}</p>}
+                      </div>
+                    </motion.div>
+                  )}
 
-                    {step === 3 && (
-                      <motion.div
-                        key="step3"
-                        variants={formVariants}
-                        initial="hidden"
-                        animate="visible"
-                        exit="exit"
-                        className="space-y-4"
-                      >
-                        <div>
-                          <Label htmlFor="industry">Industry</Label>
-                          <Input
-                            id="industry"
-                            value={formData.industry}
-                            onChange={(e) => updateFormData("industry", e.target.value)}
-                            placeholder="Technology, Healthcare, etc."
-                            required
-                            className="mt-1"
-                          />
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-
-                  <div className="mt-8 flex justify-between">
-                    {step > 1 && (
-                      <Button type="button" variant="outline" onClick={handleBack}>
-                        Back
-                      </Button>
-                    )}
-                    {step < totalSteps ? (
-                      <Button type="button" className="ml-auto" onClick={handleNext}>
-                        Next <ChevronRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    ) : (
+                  {step === 3 && (
+                    <motion.div
+                      key="step3"
+                      variants={formVariants}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      className="space-y-4"
+                    >
+                      <div>
+                        <Label htmlFor="industry">Industry</Label>
+                        <Input
+                          id="industry"
+                          value={formData.industry}
+                          onChange={(e) => updateFormData("industry", e.target.value)}
+                          placeholder="Technology, Healthcare, etc."
+                          required
+                          className="mt-1"
+                        />
+                        {errors.industry && (
+                          <p className="text-red-500 text-sm">{errors.industry}</p>
+                        )}
+                      </div>
                       <Button
-                        type="submit"
-                        className="ml-auto bg-primary text-white hover:bg-primary/90"
+                        type="button"
+                        onClick={handleSubmit}
+                        className="w-full mt-4 bg-primary text-white hover:bg-primary/90"
                       >
                         Submit <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
-                    )}
-                  </div>
-                </form>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+                {step > 1 && (
+                  <Button type="button" variant="outline" onClick={handleBack} className="mt-4">
+                    Back
+                  </Button>
+                )}
+                {step < totalSteps && (
+                  <Button
+                    type="button"
+                    className="mt-4 ml-auto"
+                    onClick={handleNext}
+                  >
+                    Next <ChevronRight className="ml-2 h-4 w-4" />
+                  </Button>
+                )}
               </CardContent>
             </Card>
           </div>
 
-          {/* Video Section */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="relative"
-          >
+          <motion.div className="relative">
             <motion.video
               src="/robot.mp4"
               autoPlay
               loop
               muted
               className="rounded-lg shadow-lg"
-              whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.3)" }}
-              whileTap={{ scale: 0.95 }}
             />
             <AnimatePresence>
               {isSubmitted && (
@@ -273,7 +282,6 @@ export default function TypeformAutomationSection() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.3 }}
                 >
                   <div className="text-white text-center p-6">
                     <CheckCircle className="w-16 h-16 mx-auto mb-4" />
