@@ -22,10 +22,10 @@ export default function Hero() {
     }
   }
 
-  const plan = searchParams?.get('plan') || null;
+  const plan = searchParams?.get('plan')|| null
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-gray-50 to-white py-20 sm:py-32">
+    <section className="relative overflow-hidden bg-gradient-to-b from-gray-50 to-white py-12 sm:py-16 lg:py-20">
       <motion.div 
         className="absolute inset-0 bg-[url(/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"
         initial={{ opacity: 0 }}
@@ -33,9 +33,9 @@ export default function Hero() {
         transition={{ duration: 1 }}
       ></motion.div>
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-y-16 md:grid-cols-2 md:gap-x-12 lg:gap-x-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <motion.div 
-            className="relative z-10 md:pt-10 lg:pt-0"
+            className="relative z-10 order-2 lg:order-1"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -46,23 +46,23 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <motion.div 
-                className="mb-8 inline-flex items-center rounded-full bg-blue-100 px-4 py-1 text-sm font-semibold leading-6 text-blue-800 ring-1 ring-inset ring-blue-300/20"
+                className="mb-6 inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-xs sm:text-sm font-semibold leading-5 text-blue-800 ring-1 ring-inset ring-blue-300/20"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Zap className="mr-2 h-4 w-4" />
+                <Zap className="mr-2 h-3 w-3 sm:h-4 sm:w-4" />
                 Next-Gen AI Solutions
               </motion.div>
-              <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl lequire-rounded-font">
+              <h1 className="mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 lequire-rounded-font">
                 Revolutionize Your Business with <span className="text-gradient animate-gradient">AI-Powered Growth</span>
               </h1>
-              <p className="mb-8 text-lg text-gray-600 sm:text-xl animate-fade-in">
-              Discover the perfect offer, automate lead acquisition, and streamline project management—all while scaling your business to 8 figures.
+              <p className="mb-6 text-base sm:text-lg text-gray-600 animate-fade-in">
+                Unlock the power of AI to automate your lead generation, streamline operations, and skyrocket your B2B growth to 8 figures and beyond.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Button 
-                    className="w-full sm:w-auto animate-scale"
+                    className="w-full sm:w-auto animate-scale text-sm sm:text-base"
                     onClick={(e) => handleNavClick(e, '/#book-your-free-discovery-call')}
                   >
                     Book Free AI Strategy Call
@@ -72,7 +72,7 @@ export default function Hero() {
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Button 
                     variant="outline"
-                    className="w-full sm:w-auto animate-scale animation-delay-300"
+                    className="w-full sm:w-auto animate-scale animation-delay-300 text-sm sm:text-base"
                     asChild
                   >
                     <Link href="/pricing">
@@ -84,7 +84,7 @@ export default function Hero() {
             </motion.div>
           </motion.div>
           <motion.div 
-            className="relative"
+            className="relative order-1 lg:order-2"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -95,33 +95,33 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="animate-float"
             >
-              <div className="relative w-[400px] h-[400px] mx-auto overflow-hidden rounded-lg shadow-2xl">
+              <div className="relative w-full max-w-[400px] h-[300px] sm:h-[400px] mx-auto overflow-hidden rounded-lg shadow-2xl">
                 <EnhancedAutomationAnimation />
               </div>
               <motion.div
-                className="absolute -bottom-10 -left-10"
+                className="absolute -bottom-4 -left-4 sm:-bottom-10 sm:-left-10"
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
                 <Card className="bg-white shadow-lg hover-lift animate-bounce-subtle">
-                  <CardContent className="p-4">
+                  <CardContent className="p-2 sm:p-4">
                     <div className="flex items-center space-x-2">
-                      <Rocket className="h-6 w-6 text-blue-600 animate-spin-slow" />
-                      <span className="text-sm font-semibold text-gray-900">10x Growth Potential</span>
+                      <Rocket className="h-4 w-4 sm:h-6 sm:w-6 text-blue-600 animate-spin-slow" />
+                      <span className="text-xs sm:text-sm font-semibold text-gray-900">10x Growth Potential</span>
                     </div>
                   </CardContent>
                 </Card>
               </motion.div>
               <motion.div
-                className="absolute -top-10 -right-10"
+                className="absolute -top-4 -right-4 sm:-top-10 sm:-right-10"
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
                 <Card className="bg-white shadow-lg hover-lift animate-bounce-subtle animation-delay-300">
-                  <CardContent className="p-4">
+                  <CardContent className="p-2 sm:p-4">
                     <div className="flex items-center space-x-2">
-                      <Brain className="h-6 w-6 text-blue-600 animate-pulse" />
-                      <span className="text-sm font-semibold text-gray-900">AI-Driven Insights</span>
+                      <Brain className="h-4 w-4 sm:h-6 sm:w-6 text-blue-600 animate-pulse" />
+                      <span className="text-xs sm:text-sm font-semibold text-gray-900">AI-Driven Insights</span>
                     </div>
                   </CardContent>
                 </Card>

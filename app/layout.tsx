@@ -5,6 +5,10 @@ import './globals.css';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Script from 'next/script';
+import dynamic from 'next/dynamic';
+
+const CookiePopup = dynamic(() => import('@/components/cookie-popup'), { ssr: false })
+
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
@@ -49,6 +53,7 @@ export default function RootLayout({
             })(document, 'script');
           `}
         </Script>
+        <CookiePopup/>
       </body>
     </html>
   );

@@ -1,50 +1,65 @@
 {
-  "../app/page.tsx -> @/components/ai-agents-section": {
-    "id": "../app/page.tsx -> @/components/ai-agents-section",
+  "../app/layout.tsx -> @/components/cookie-popup": {
+    "id": 5060,
     "files": [
-      "static/chunks/_app-pages-browser_components_ai-agents-section_tsx.js"
+      "static/chunks/851.f923da7c40b64838.js",
+      "static/chunks/929.000bf15ce8917324.js",
+      "static/chunks/60.33a6d0a1ad7404cc.js"
+    ]
+  },
+  "../app/page.tsx -> @/components/ai-agents-section": {
+    "id": 3857,
+    "files": [
+      "static/chunks/857.572f90df9e8a4789.js"
     ]
   },
   "../app/page.tsx -> @/components/calendly-embed": {
-    "id": "../app/page.tsx -> @/components/calendly-embed",
+    "id": 6538,
     "files": [
-      "static/chunks/_app-pages-browser_components_calendly-embed_tsx.js"
+      "static/chunks/538.50f0cd77308b6852.js"
     ]
   },
   "../app/page.tsx -> @/components/faq-section": {
-    "id": "../app/page.tsx -> @/components/faq-section",
+    "id": 3134,
     "files": [
-      "static/chunks/_app-pages-browser_components_faq-section_tsx.js"
+      "static/chunks/851.f923da7c40b64838.js",
+      "static/chunks/134.31bb8a50228c4fbc.js"
     ]
   },
   "../app/page.tsx -> @/components/features-section": {
-    "id": "../app/page.tsx -> @/components/features-section",
+    "id": 1362,
     "files": [
-      "static/chunks/_app-pages-browser_components_features-section_tsx.js"
+      "static/chunks/362.953d50a7caa067ea.js"
     ]
   },
   "../app/page.tsx -> @/components/hero": {
-    "id": "../app/page.tsx -> @/components/hero",
+    "id": 5911,
     "files": [
-      "static/chunks/_app-pages-browser_components_hero_tsx.js"
+      "static/chunks/911.28be4c3d941d4724.js"
     ]
   },
   "../app/page.tsx -> @/components/operations-section": {
-    "id": "../app/page.tsx -> @/components/operations-section",
+    "id": 3278,
     "files": [
-      "static/chunks/_app-pages-browser_components_operations-section_tsx.js"
+      "static/chunks/278.77a437a6a665f50a.js"
     ]
   },
   "../app/page.tsx -> @/components/services-section": {
-    "id": "../app/page.tsx -> @/components/services-section",
+    "id": 4053,
     "files": [
-      "static/chunks/_app-pages-browser_components_services-section_tsx.js"
+      "static/chunks/53.9bbc73c36ab804d4.js"
     ]
   },
   "../app/page.tsx -> @/components/typeform-automation-section": {
-    "id": "../app/page.tsx -> @/components/typeform-automation-section",
+    "id": 2101,
     "files": [
-      "static/chunks/_app-pages-browser_components_typeform-automation-section_tsx.js"
+      "static/chunks/101.59468d6ed0b682a8.js"
+    ]
+  },
+  "../components/cookie-popup.tsx -> react-confetti": {
+    "id": 6393,
+    "files": [
+      "static/chunks/393.7cdf668802f5483f.js"
     ]
   }
 }
