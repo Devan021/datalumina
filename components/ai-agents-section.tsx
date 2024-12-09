@@ -125,10 +125,10 @@ export default function AIAgentsSection() {
                       <Button
                         size="lg"
                         className="bg-white text-gray-900 hover:bg-gray-100 group relative overflow-hidden"
-                        onClick={() => router.push('/pricing')}
+                        onClick={() => router.push('/')}
                       >
                         <span className="relative z-10 flex items-center">
-                          View Pricing
+                          Get Started
                           <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                         </span>
                         <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

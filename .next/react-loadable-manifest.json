@@ -3,14 +3,14 @@
     "id": 5060,
     "files": [
       "static/chunks/851.f923da7c40b64838.js",
-      "static/chunks/929.000bf15ce8917324.js",
-      "static/chunks/60.33a6d0a1ad7404cc.js"
+      "static/chunks/796.a620a6bd4768bcea.js",
+      "static/chunks/60.01feaff5ad8372f9.js"
     ]
   },
   "../app/page.tsx -> @/components/ai-agents-section": {
-    "id": 3857,
+    "id": 3592,
     "files": [
-      "static/chunks/857.572f90df9e8a4789.js"
+      "static/chunks/592.b052d2e019738785.js"
     ]
   },
   "../app/page.tsx -> @/components/calendly-embed": {
@@ -33,9 +33,9 @@
     ]
   },
   "../app/page.tsx -> @/components/hero": {
-    "id": 5911,
+    "id": 7940,
     "files": [
-      "static/chunks/911.28be4c3d941d4724.js"
+      "static/chunks/940.9c2f627b5ae4b797.js"
     ]
   },
   "../app/page.tsx -> @/components/operations-section": {

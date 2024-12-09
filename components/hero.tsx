@@ -22,10 +22,10 @@ export default function Hero() {
     }
   }
 
-  const plan = searchParams?.get('plan')|| null
+  const plan = searchParams?.get('plan') || null
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-gray-50 to-white py-12 sm:py-16 lg:py-20">
+    <section className="relative overflow-hidden bg-gradient-to-b from-gray-50 to-white py-8 sm:py-12 lg:py-16">
       <motion.div 
         className="absolute inset-0 bg-[url(/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"
         initial={{ opacity: 0 }}
@@ -46,39 +46,31 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <motion.div 
-                className="mb-6 inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-xs sm:text-sm font-semibold leading-5 text-blue-800 ring-1 ring-inset ring-blue-300/20"
+                className="mb-4 sm:mb-6 inline-flex items-center rounded-full bg-blue-100 px-2 py-1 text-xs sm:text-sm font-semibold leading-5 text-blue-800 ring-1 ring-inset ring-blue-300/20"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Zap className="mr-2 h-3 w-3 sm:h-4 sm:w-4" />
+                <Zap className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
                 Next-Gen AI Solutions
               </motion.div>
-              <h1 className="mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 lequire-rounded-font">
+              <h1 className="mb-3 sm:mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-gray-900 lequire-rounded-font">
                 Revolutionize Your Business with <span className="text-gradient animate-gradient">AI-Powered Growth</span>
               </h1>
-              <p className="mb-6 text-base sm:text-lg text-gray-600 animate-fade-in">
+              <p className="mb-4 sm:mb-6 text-sm sm:text-base lg:text-lg text-gray-600 animate-fade-in">
                 Unlock the power of AI to automate your lead generation, streamline operations, and skyrocket your B2B growth to 8 figures and beyond.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Button 
-                    className="w-full sm:w-auto animate-scale text-sm sm:text-base"
+                    className="w-full sm:w-auto animate-scale text-xs sm:text-sm lg:text-base"
                     onClick={(e) => handleNavClick(e, '/#book-your-free-discovery-call')}
                   >
                     Book Free AI Strategy Call
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <ArrowRight className="ml-1 sm:ml-2 h-3 w-3 sm:h-4 sm:w-4" />
                   </Button>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button 
-                    variant="outline"
-                    className="w-full sm:w-auto animate-scale animation-delay-300 text-sm sm:text-base"
-                    asChild
-                  >
-                    <Link href="/pricing">
-                      View AI Solutions & Pricing
-                    </Link>
-                  </Button>
+                  {/* Additional button can be added here if needed */}
                 </motion.div>
               </div>
             </motion.div>
@@ -95,32 +87,32 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="animate-float"
             >
-              <div className="relative w-full max-w-[400px] h-[300px] sm:h-[400px] mx-auto overflow-hidden rounded-lg shadow-2xl">
+              <div className="relative w-full max-w-[280px] sm:max-w-[400px] h-[200px] sm:h-[300px] lg:h-[400px] mx-auto overflow-hidden rounded-lg shadow-2xl">
                 <EnhancedAutomationAnimation />
               </div>
               <motion.div
-                className="absolute -bottom-4 -left-4 sm:-bottom-10 sm:-left-10"
+                className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 lg:-bottom-10 lg:-left-10"
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
                 <Card className="bg-white shadow-lg hover-lift animate-bounce-subtle">
-                  <CardContent className="p-2 sm:p-4">
-                    <div className="flex items-center space-x-2">
-                      <Rocket className="h-4 w-4 sm:h-6 sm:w-6 text-blue-600 animate-spin-slow" />
+                  <CardContent className="p-1 sm:p-2 lg:p-4">
+                    <div className="flex items-center space-x-1 sm:space-x-2">
+                      <Rocket className="h-3 w-3 sm:h-4 sm:w-4 lg:h-6 lg:w-6 text-blue-600 animate-spin-slow" />
                       <span className="text-xs sm:text-sm font-semibold text-gray-900">10x Growth Potential</span>
                     </div>
                   </CardContent>
                 </Card>
               </motion.div>
               <motion.div
-                className="absolute -top-4 -right-4 sm:-top-10 sm:-right-10"
+                className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 lg:-top-10 lg:-right-10"
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
                 <Card className="bg-white shadow-lg hover-lift animate-bounce-subtle animation-delay-300">
-                  <CardContent className="p-2 sm:p-4">
-                    <div className="flex items-center space-x-2">
-                      <Brain className="h-4 w-4 sm:h-6 sm:w-6 text-blue-600 animate-pulse" />
+                  <CardContent className="p-1 sm:p-2 lg:p-4">
+                    <div className="flex items-center space-x-1 sm:space-x-2">
+                      <Brain className="h-3 w-3 sm:h-4 sm:w-4 lg:h-6 lg:w-6 text-blue-600 animate-pulse" />
                       <span className="text-xs sm:text-sm font-semibold text-gray-900">AI-Driven Insights</span>
                     </div>
                   </CardContent>

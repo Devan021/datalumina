@@ -58,7 +58,7 @@ export default function FeaturedAIService() {
               </li>
             </ul>
             <Link 
-              href="https://www.linkedin.com/messaging/thread/new/?recipient=devansp2020" 
+              href="https://calendly.com/eswarsairam22/hollerlabs_free_discovery_call" 
               target="_blank" 
               rel="noopener noreferrer" 
               passHref
