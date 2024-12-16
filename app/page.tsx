@@ -1,63 +1,95 @@
 "use client";
 
-import { Suspense, lazy } from 'react'
-import dynamic from 'next/dynamic'
-import LoadingSpinner from '@/components/ui/loading-spinner'
-import FeaturedAIService from '@/components/ai-features-section'
-
-const ClientHero = dynamic(() => import('@/components/hero'), { ssr: false })
-const FeaturesSection = lazy(() => import('@/components/features-section'))
-const ServicesSection = lazy(() => import('@/components/services-section'))
-const AIAgentsSection = lazy(() => import('@/components/ai-agents-section'))
-const TypeformAutomationSection = lazy(() => import('@/components/typeform-automation-section'))
-const OperationsSection = lazy(() => import('@/components/operations-section'))
-const FAQSection = lazy(() => import('@/components/faq-section'))
-const CalendlyEmbed = lazy(() => import('@/components/calendly-embed'))
-
-const SectionWrapper = ({ children }: { children: React.ReactNode }) => (
-  <Suspense fallback={<LoadingSpinner />}>
-    {children}
-  </Suspense>
-)
+import { Suspense } from 'react'
+import { Button } from "@/components/ui/button"
+import Image from "next/image"
+import Link from "next/link"
+import { HeroSection } from '@/components/HeroSection'
+import { PartnerLogos } from '@/components/PartnerLogos'
+import { ServicesSection } from '@/components/ServicesSection'
+import { CasesSection } from '@/components/CasesSection'
+import { TrustSection } from '@/components/TrustSection'
+import { InsightsSection } from '@/components/InsightsSection'
+import { TestimonialSection } from '@/components/TestimonialSection'
+import { CtaSection } from '@/components/CtaSection'
+import { Footer } from '@/components/Footer'
 
 export default function Home() {
   return (
-    <>
-      <ClientHero />
-      <SectionWrapper>
-        <FeaturesSection />
-      </SectionWrapper>
-      <SectionWrapper>
-        <ServicesSection />
-      </SectionWrapper>
-      <SectionWrapper>
-        <AIAgentsSection />
-      </SectionWrapper>
-      <SectionWrapper>
-        <FeaturedAIService />
-      </SectionWrapper>
-      <SectionWrapper>
-        <TypeformAutomationSection />
-      </SectionWrapper>
-      <SectionWrapper>
-        <OperationsSection />
-      </SectionWrapper>
-      <SectionWrapper>
-        <FAQSection />
-      </SectionWrapper>
-      <SectionWrapper>
-        <section id="book-your-free-discovery-call" className="py-20 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center mb-8">Book Your Free AI Strategy Call</h2>
-            <CalendlyEmbed 
-              url="https://calendly.com/eswarsairam22/hollerlabs_free_discovery_call"
-              className="bg-white rounded-lg shadow-xl overflow-hidden"
-            />
+    <div className="min-h-screen bg-black">
+      <nav className="fixed top-0 w-full z-50 px-6 py-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="glass-card rounded-full px-6 py-3 flex justify-between items-center">
+            <Link href="/" className="flex items-center space-x-2">
+              <Image src="/logo.svg" alt="Datalumina" width={32} height={32} />
+              <span className="text-white font-semibold">Datalumina</span>
+            </Link>
+            <div className="hidden md:flex items-center space-x-8">
+              <Link href="/for-organizations" className="text-blue-100/80 hover:text-white transition-colors">
+                For Organizations
+              </Link>
+              <Link href="/for-developers" className="text-blue-100/80 hover:text-white transition-colors">
+                For Developers
+              </Link>
+              <Link href="/cases" className="text-blue-100/80 hover:text-white transition-colors">
+                Cases
+              </Link>
+              <Link href="/insights" className="text-blue-100/80 hover:text-white transition-colors">
+                Insights
+              </Link>
+              <Link href="/about" className="text-blue-100/80 hover:text-white transition-colors">
+                About
+              </Link>
+            </div>
+            <Button 
+              className="bg-blue-600 text-white hover:bg-blue-700 rounded-full px-6"
+            >
+              Contact Us
+            </Button>
           </div>
-        </section>
-      </SectionWrapper>
+        </div>
+      </nav>
 
-    </>
+      <main>
+        <Suspense fallback={
+          <div className="min-h-screen flex items-center justify-center">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
+          </div>
+        }>
+          <HeroSection />
+        </Suspense>
+
+        <Suspense fallback={null}>
+          <PartnerLogos />
+        </Suspense>
+
+        <Suspense fallback={null}>
+          <ServicesSection />
+        </Suspense>
+
+        <Suspense fallback={null}>
+          <CasesSection />
+        </Suspense>
+
+        <Suspense fallback={null}>
+          <TrustSection />
+        </Suspense>
+
+        <Suspense fallback={null}>
+          <InsightsSection />
+        </Suspense>
+
+        <Suspense fallback={null}>
+          <TestimonialSection />
+        </Suspense>
+
+        <Suspense fallback={null}>
+          <CtaSection />
+        </Suspense>
+      </main>
+
+      <Footer />
+    </div>
   )
 }
 
