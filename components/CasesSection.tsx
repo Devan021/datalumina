@@ -9,14 +9,14 @@ import { Button } from "@/components/ui/button"
 const cases = [
   {
     slug: "solvemyhealth",
-    category: "FinTech",
-    title: "Real-time Coin Data for Crypto Insiders",
-    description: "Delivered lightning-fast cryptocurrency data to over 2 million monthly visitors, enhancing user experience and solidifying market position.",
-    logo: "/celestial.svg",
+    category: "Healthcare",
+    title: "Transforming healthcare with AI-driven chat solutions for SOLVEMyHealth",
+    description: "Delivered rapid healthcare insights to over 2 million monthly users, elevating experience and strengthening SOLVEMyHealth's leadership.",
+    logo: "/solvemy.jpg",
     image: "/data.png",
     metrics: [
-      { label: "Response Time", value: "<200ms" },
-      { label: "Monthly Visitors", value: "2M+" },
+      { label: "Response Time", value: "<100ms" },
+      { label: "Monthly Visitors", value: "100K+" },
       { label: "Uptime", value: "99.99%" }
     ]
   },

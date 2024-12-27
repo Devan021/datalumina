@@ -38,39 +38,6 @@ const insights = [
       avatar: "/avatars/sarah-thompson.jpg"
     },
     category: "Machine Learning"
-  },
-  {
-    title: "Blockchain in Supply Chain Management",
-    description: "Exploring the potential of blockchain technology to revolutionize supply chain transparency and efficiency.",
-    image: "/insight-blockchain-supply-chain.jpg",
-    author: {
-      name: "Alex Rodriguez",
-      role: "Blockchain Specialist",
-      avatar: "/avatars/alex-rodriguez.jpg"
-    },
-    category: "Blockchain"
-  },
-  {
-    title: "The Rise of Edge Computing",
-    description: "Understanding the shift towards edge computing and its impact on real-time data processing.",
-    image: "/insight-edge-computing.jpg",
-    author: {
-      name: "Priya Patel",
-      role: "IoT Solutions Architect",
-      avatar: "/avatars/priya-patel.jpg"
-    },
-    category: "Edge Computing"
-  },
-  {
-    title: "Natural Language Processing Breakthroughs",
-    description: "Recent advancements in NLP and their applications in various industries.",
-    image: "/insight-nlp-breakthroughs.jpg",
-    author: {
-      name: "David Lee",
-      role: "NLP Researcher",
-      avatar: "/avatars/david-lee.jpg"
-    },
-    category: "Natural Language Processing"
   }
 ]
 

@@ -8,12 +8,12 @@ const contactCards = [
   {
     title: "Work with us",
     description: "Ready to bring AI to production? We specialize in guiding engineering teams through AI transformation — from team training and product strategy to implementation. Whether you're building AI-powered features or scaling existing solutions, let's explore how we can create value together.",
-    email: "BUSINESS@DATALUMINA.COM"
+    email: "AIAGENTS@HOLLERLABS.ORG"
   },
   {
     title: "Get answers",
     description: "Curious about how we turn complexity into capability? Want specifics about our approach? We're here to cut through the noise and give you clarity. Ask us anything.",
-    email: "INFO@DATALUMINA.COM"
+    email: "TEAM@HOLLERLABS.ORG"
   }
 ]
 

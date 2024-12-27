@@ -6,26 +6,26 @@ import { ArrowRight } from 'lucide-react'
 
 const cases = [
   {
-    id: 'crypto-insiders',
-    title: "Real-time Coin Data for Crypto Insiders",
-    description: "Delivered lightning-fast cryptocurrency data to over 2 million monthly visitors, enhancing user experience and solidifying Crypto Insiders' market position.",
-    image: "/case-crypto-insiders.jpg",
-    logo: "/logos/crypto-insiders.svg",
-    tags: ["FinTech", "Real-time Data", "Scalability"],
+    id: 'solvemyhealth',
+    title: "Transforming healthcare with AI-driven chat solutions for SOLVEMyHealth",
+    description: "Delivered rapid healthcare insights to over 2 million monthly users, elevating experience and strengthening SOLVEMyHealth's leadership.",
+    image: "/blue.jpg",
+    logo: "/solvemy.jpg",
+    tags: ["Healthcare", "Real-time Data", "Scalability"],
     gradient: "from-blue-600/20 to-purple-600/20",
     metrics: [
-      { label: "Response Time", value: "<200ms" },
-      { label: "Monthly Visitors", value: "2M+" },
+      { label: "Response Time", value: "<100ms" },
+      { label: "Monthly Visitors", value: "100K+" },
       { label: "Uptime", value: "99.99%" }
     ]
   },
   {
-    id: 'blank-customer-service',
-    title: "AI-Powered Customer Service for BLANK",
-    description: "Revolutionized customer support for BLANK, a leading e-commerce brand, by implementing an AI-driven solution that dramatically improved response times and customer satisfaction.",
-    image: "/case-blank.jpg",
-    logo: "/logos/blank.svg",
-    tags: ["E-commerce", "AI", "Customer Service"],
+    id: 'innpixelai',
+    title: "Supercharging Operations with AI Automation for innPixelAI",
+    description: "Revolutionized customer support for inPixelAI, a leading Digital Marketing Agency, by implementing an AI-driven solution that dramatically improved response times and customer satisfaction.",
+    image: "/blue.jpg",
+    logo: "/innpixel.png",
+    tags: ["Digital-Marketing", "AI", "Customer Service"],
     gradient: "from-purple-600/20 to-pink-600/20",
     metrics: [
       { label: "Response Time", value: "-60%" },
@@ -34,17 +34,17 @@ const cases = [
     ]
   },
   {
-    id: 'timescale-embeddings',
-    title: "Timescale Embeddings Simplification",
-    description: "Collaborated with Timescale to showcase their innovative PostgreSQL extensions, simplifying complex embeddings for AI developers and expanding the reach of cutting-edge database technology.",
-    image: "/case-timescale.jpg",
-    logo: "/logos/timescale.svg",
-    tags: ["Database", "AI", "Developer Tools"],
-    gradient: "from-pink-600/20 to-blue-600/20",
+    id: 'greenviewrealty',
+    title: "Transforming Real Estate Engagement with AI Agents for GreenView Realty",
+    description: "GreenView Realty, a mid-sized real estate agency in Los Angeles, leveraged AI-driven agents to enhance customer engagement, reduce response time, and increase sales conversions.",
+    image: "/blue.jpg",
+    logo: "/greenview.jpeg",
+    tags: ["Real Estate", "AI", "Customer Engagement"],
+    gradient: "from-green-600/20 to-blue-600/20",
     metrics: [
-      { label: "Tutorial Views", value: "100K+" },
-      { label: "GitHub Stars", value: "+2K" },
-      { label: "Developer Adoption", value: "+150%" }
+      { label: "Response Time Reduction", value: "40%" },
+      { label: "Conversion Increase", value: "30%" },
+      { label: "Customer Inquiries Managed", value: "500K+" }
     ]
   }
 ]
