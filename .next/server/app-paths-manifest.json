@@ -1,1 +1,9 @@
-{}
+{
+  "/not-found": "app/not-found.js",
+  "/page": "app/page.js",
+  "/cases/[slug]/page": "app/cases/[slug]/page.js",
+  "/for-organizations/page": "app/for-organizations/page.js",
+  "/cases/page": "app/cases/page.js",
+  "/insights/page": "app/insights/page.js",
+  "/contact/page": "app/contact/page.js"
+}
