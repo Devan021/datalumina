@@ -47,20 +47,20 @@ export function HeroSection() {
           variants={itemVariants}
           className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base font-medium text-white bg-white/10 rounded-full border border-white/20 backdrop-blur-sm"
         >
-          Transforming businesses with AI - Version 4.22.0
+          Worlds Best Affordable AI Agents
         </motion.span>
         <motion.h1
           variants={itemVariants}
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight sm:leading-tight lg:leading-tight text-shadow-glow"
         >
-          Unleash the Power of <br className="hidden sm:inline" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">AI-Driven Solutions</span>
+          Simplifying Your Future <br className="hidden sm:inline" />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-100">Affordably</span>
         </motion.h1>
         <motion.p
           variants={itemVariants}
           className="text-base sm:text-lg md:text-xl text-white/80 max-w-3xl mx-auto mt-4 sm:mt-6"
         >
-          Harness cutting-edge AI and data technologies to transform your business landscape. Our tailored solutions deliver unparalleled scalability and competitive advantages. Now with improved performance and enhanced user experience!
+          Revolutionizing businesses with affordable AI solutions 
         </motion.p>
         <motion.div
           variants={itemVariants}
@@ -82,7 +82,7 @@ export function HeroSection() {
             variant="outline" 
             className="w-full sm:w-auto text-white border-white/20 bg-white/5 hover:bg-white/10 px-8 py-6 text-base sm:text-lg rounded-full backdrop-blur-sm transition-all duration-300"
           >
-            <Link href="#services">Explore Solutions</Link>
+            <Link href="/for-organizations">Explore Solutions</Link>
           </Button>
         </motion.div>
       </motion.div>

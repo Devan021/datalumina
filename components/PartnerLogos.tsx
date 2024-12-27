@@ -4,12 +4,12 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 const partners = [
- { name: 'BLANK', logo: '/blank-logo.svg' },
- { name: 'MAKE DAY', logo: '/makeday-logo.svg' },
- { name: 'FLOW', logo: '/flow-logo.svg' },
- { name: 'DRIPPT', logo: '/drippt-logo.svg' },
- { name: 'CRYPTO STUDIO', logo: '/crypto-studio-logo.svg' },
- { name: 'MAKE SET', logo: '/makeset-logo.svg' }
+ { name: 'CLAUDE', logo: '/claude.png' },
+ { name: 'MAKE', logo: '/make.png' },
+ { name: 'VOICEFLOW', logo: '/voiceflow.png' },
+ { name: 'NODE', logo: '/node-js.png' },
+ { name: 'ZAPIER', logo: '/zapier.png' },
+ { name: 'CURSOR', logo: '/cursor-you.svg' }
 ]
 
 export function PartnerLogos() {
