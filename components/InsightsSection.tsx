@@ -4,90 +4,121 @@ import { motion } from 'framer-motion'
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from 'lucide-react'
+import Link from 'next/link'
 
 const insights = [
   {
-    title: "We're continuously gathering new intel",
-    author: "Thomas Anderson",
-    date: "Dec 16, 2024",
-    image: "/blog-1.jpg",
-    gradient: "from-blue-600/20 to-purple-600/20"
+    title: "The Future of AI in Business",
+    description: "Exploring how artificial intelligence is reshaping industries and driving innovation across sectors.",
+    image: "/insights/ai-business-future.jpg",
+    category: "AI Trends",
+    author: {
+      name: "Dr. Emily Chen",
+      role: "AI Research Lead",
+      avatar: "/team/emily-chen.jpg"
+    }
   },
   {
-    title: "Why generative AI often fails to deliver value",
-    author: "Sarah Connor",
-    date: "Dec 15, 2024",
-    image: "/blog-2.jpg",
-    gradient: "from-purple-600/20 to-pink-600/20"
+    title: "Implementing Ethical AI Practices",
+    description: "A deep dive into the importance of ethical considerations in AI development and deployment.",
+    image: "/insights/ethical-ai.jpg",
+    category: "AI Ethics",
+    author: {
+      name: "Michael Johnson",
+      role: "Ethics Specialist",
+      avatar: "/team/michael-johnson.jpg"
+    }
   },
   {
-    title: "Breaking down the challenges of implementation",
-    author: "John Matrix",
-    date: "Dec 14, 2024",
-    image: "/blog-3.jpg",
-    gradient: "from-pink-600/20 to-blue-600/20"
+    title: "Optimizing Data Pipelines for AI",
+    description: "Best practices for building efficient and scalable data pipelines to fuel your AI initiatives.",
+    image: "/insights/data-pipelines.jpg",
+    category: "Data Engineering",
+    author: {
+      name: "Sarah Thompson",
+      role: "Lead Data Engineer",
+      avatar: "/team/sarah-thompson.jpg"
+    }
   }
 ]
 
 export function InsightsSection() {
   return (
-    <section className="relative py-32 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-blue-950/50 backdrop-blur-sm"></div>
+    <section className="relative py-32 px-4 overflow-hidden bg-[#020B2D]">
       <div className="max-w-7xl mx-auto relative z-10">
-        <motion.div
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-5xl font-bold text-white mb-16"
         >
-          <h2 className="text-4xl font-bold text-white mb-4">Our latest insights</h2>
-          <p className="text-blue-100/80 text-xl max-w-2xl mx-auto">
-            Stay updated with our latest thoughts on AI, data science, and digital transformation
-          </p>
-        </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {insights.map((post, index) => (
+          Our latest insights
+        </motion.h2>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {insights.map((insight, index) => (
             <motion.div
-              key={post.title}
+              key={insight.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="group glass-card glass-card-hover rounded-3xl overflow-hidden"
+              className="rounded-3xl overflow-hidden bg-[#0A1A40] flex flex-col"
             >
               <div className="relative h-48">
                 <Image
-                  src={post.image}
-                  alt={post.title}
+                  src={insight.image}
+                  alt={insight.title}
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="object-cover"
                 />
-                <div className={`absolute inset-0 bg-gradient-to-br ${post.gradient} mix-blend-overlay`}></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A1A40] to-transparent"></div>
               </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-semibold text-white mb-4">{post.title}</h3>
-                <div className="flex items-center space-x-4 mb-6">
-                  <Image
-                    src="/placeholder-avatar.jpg"
-                    alt={post.author}
-                    width={32}
-                    height={32}
-                    className="rounded-full"
-                  />
-                  <div>
-                    <p className="text-white font-medium">{post.author}</p>
-                    <p className="text-blue-100/60 text-sm">{post.date}</p>
-                  </div>
+              <div className="p-8 flex flex-col flex-grow">
+                <div className="flex gap-3 mb-4">
+                  <span className="text-xs px-3 py-1 rounded-full bg-blue-500/10 text-blue-400">
+                    {insight.category}
+                  </span>
                 </div>
-                <Button 
-                  variant="ghost" 
-                  className="text-blue-400 hover:text-blue-300 p-0 group flex items-center"
-                >
-                  Read article 
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Button>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {insight.title}
+                </h3>
+                <p className="text-blue-100/70 mb-6 flex-grow">
+                  {insight.description}
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    <Image
+                      src={insight.author.avatar}
+                      alt={insight.author.name}
+                      width={32}
+                      height={32}
+                      className="rounded-full"
+                    />
+                    <div>
+                      <p className="text-white font-medium">{insight.author.name}</p>
+                      <p className="text-sm text-white/60">{insight.author.role}</p>
+                    </div>
+                  </div>
+                  <Button 
+                    variant="ghost"
+                    className="text-blue-400 hover:text-blue-300 p-0"
+                  >
+                    READ ARTICLE
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </div>
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <Link href="/insights" className="inline-flex items-center">
+              View All Insights
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

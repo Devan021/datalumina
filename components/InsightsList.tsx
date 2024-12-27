@@ -1,0 +1,133 @@
+"use client";
+
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+import { Button } from "@/components/ui/button"
+import { ArrowRight } from 'lucide-react'
+
+const insights = [
+  {
+    title: "The Future of AI in Business",
+    description: "Exploring how artificial intelligence is reshaping industries and driving innovation.",
+    image: "/insight-ai-business.jpg",
+    author: {
+      name: "Dr. Emily Chen",
+      role: "AI Research Lead",
+      avatar: "/avatars/emily-chen.jpg"
+    },
+    category: "Artificial Intelligence"
+  },
+  {
+    title: "Data Privacy in the Age of Big Data",
+    description: "Navigating the complex landscape of data protection and ethical use of information.",
+    image: "/insight-data-privacy.jpg",
+    author: {
+      name: "Michael Johnson",
+      role: "Data Ethics Specialist",
+      avatar: "/avatars/michael-johnson.jpg"
+    },
+    category: "Data Ethics"
+  },
+  {
+    title: "Machine Learning for Predictive Maintenance",
+    description: "How ML is revolutionizing equipment maintenance across industries.",
+    image: "/insight-predictive-maintenance.jpg",
+    author: {
+      name: "Sarah Thompson",
+      role: "ML Engineer",
+      avatar: "/avatars/sarah-thompson.jpg"
+    },
+    category: "Machine Learning"
+  },
+  {
+    title: "Blockchain in Supply Chain Management",
+    description: "Exploring the potential of blockchain technology to revolutionize supply chain transparency and efficiency.",
+    image: "/insight-blockchain-supply-chain.jpg",
+    author: {
+      name: "Alex Rodriguez",
+      role: "Blockchain Specialist",
+      avatar: "/avatars/alex-rodriguez.jpg"
+    },
+    category: "Blockchain"
+  },
+  {
+    title: "The Rise of Edge Computing",
+    description: "Understanding the shift towards edge computing and its impact on real-time data processing.",
+    image: "/insight-edge-computing.jpg",
+    author: {
+      name: "Priya Patel",
+      role: "IoT Solutions Architect",
+      avatar: "/avatars/priya-patel.jpg"
+    },
+    category: "Edge Computing"
+  },
+  {
+    title: "Natural Language Processing Breakthroughs",
+    description: "Recent advancements in NLP and their applications in various industries.",
+    image: "/insight-nlp-breakthroughs.jpg",
+    author: {
+      name: "David Lee",
+      role: "NLP Researcher",
+      avatar: "/avatars/david-lee.jpg"
+    },
+    category: "Natural Language Processing"
+  }
+]
+
+export function InsightsList() {
+  return (
+    <section className="relative py-20 px-4 overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {insights.map((insight, index) => (
+            <motion.div
+              key={insight.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              className="group rounded-3xl overflow-hidden bg-[#0A1A40] flex flex-col"
+            >
+              <div className="relative h-48">
+                <Image
+                  src={insight.image}
+                  alt={insight.title}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A1A40]/80"></div>
+              </div>
+              <div className="p-8 flex-grow">
+                <span className="text-xs px-3 py-1 rounded-full bg-blue-500/10 text-blue-300 mb-4 inline-block">
+                  {insight.category}
+                </span>
+                <h3 className="text-2xl font-bold text-white mb-4">{insight.title}</h3>
+                <p className="text-blue-100/70 mb-6">{insight.description}</p>
+                <div className="flex items-center mb-6">
+                  <Image
+                    src={insight.author.avatar}
+                    alt={insight.author.name}
+                    width={40}
+                    height={40}
+                    className="rounded-full mr-4"
+                  />
+                  <div>
+                    <p className="text-white font-medium">{insight.author.name}</p>
+                    <p className="text-blue-300 text-sm">{insight.author.role}</p>
+                  </div>
+                </div>
+                <Button 
+                  variant="ghost" 
+                  className="text-blue-400 hover:text-blue-300 p-0 group flex items-center"
+                >
+                  Read article 
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+

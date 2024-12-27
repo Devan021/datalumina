@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button"
@@ -23,7 +23,7 @@ export function CtaSection() {
           </p>
           <Button 
             size="lg" 
-            className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-6 text-lg rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
+            className="w-full sm:w-auto bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-lg rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
           >
             Get in touch
             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

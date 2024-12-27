@@ -1,0 +1,54 @@
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.logo-glow {
+  position: relative;
+}
+
+.logo-glow::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(20px);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Gradient backgrounds */
+.gradient-radial {
+  background: radial-gradient(circle at center, var(--tw-gradient-stops));
+}
+
+.gradient-hero {
+  --tw-gradient-from: #1a2a4e;
+  --tw-gradient-via: #0a0f1a;
+  --tw-gradient-to: #020B2D;
+}
+
+/* Glow effects */
+.glow-blue {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+}
+

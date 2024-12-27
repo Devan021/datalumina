@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect, useRef } from 'react'
 
 interface Star {
@@ -5,6 +7,7 @@ interface Star {
   y: number
   radius: number
   speed: number
+  color: string
 }
 
 export function StarfieldAnimation() {
@@ -32,19 +35,25 @@ export function StarfieldAnimation() {
         y: Math.random() * canvas.height,
         radius: Math.random() * 1.5,
         speed: Math.random() * 0.5 + 0.2,
+        color: `rgba(135, 206, 235, ${Math.random() * 0.5 + 0.5})` // Sky blue with varying opacity
       })
     }
 
     function animateStars() {
-      ctx!.clearRect(0, 0, canvas!.width, canvas!.height) // Non-null assertion for canvas
-      ctx!.fillStyle = 'rgba(255, 255, 255, 0.8)' 
+      if (!ctx || !canvas) return // Ensure ctx and canvas are defined
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
       stars.forEach((star) => {
         star.y -= star.speed
-        if (star.y < 0) star.y = canvas!.height // Non-null assertion for canvas
+        if (star.y < 0) {
+          star.y = canvas.height
+          star.color = `rgba(0, 0, 139, ${Math.random() * 0.5 + 0.5})` // Transition to dark blue
+        }
 
-        ctx!.beginPath()
-        ctx!.arc(star.x, star.y, star.radius, 0, Math.PI * 2)
-        ctx!.fill()
+        ctx.beginPath()
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2)
+        ctx.fillStyle = star.color
+        ctx.fill()
       })
       requestAnimationFrame(animateStars)
     }
@@ -56,5 +65,5 @@ export function StarfieldAnimation() {
     }
   }, [])
 
-  return <canvas ref={canvasRef} className="absolute inset-0 z-0" />
+  return <canvas ref={canvasRef} className="fixed inset-0 z-0 pointer-events-none" />
 }
