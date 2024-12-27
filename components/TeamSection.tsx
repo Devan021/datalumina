@@ -7,13 +7,13 @@ const team = [
  {
    name: "Deva Nandhan",
    role: "CTO and Co-Founder",
-   image: "/team/deva-nandhan.jpg",
+   image: "/devan.jpg",
    bio: "Leading our technical vision and innovation with extensive experience in AI and software architecture."
  },
  {
    name: "Eswar Lakkakula",
    role: "Strategy Lead and Co-Founder",
-   image: "/team/eswar-lakkakula.jpg",
+   image: "/eswar.jpeg",
    bio: "Guiding our strategic direction and client partnerships with a deep understanding of business and technology integration."
  }
 ]

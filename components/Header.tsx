@@ -24,7 +24,7 @@ export function Header() {
      <div className="max-w-7xl mx-auto">
        <nav className={`glass-card rounded-full px-3 sm:px-6 py-2 sm:py-3 flex justify-between items-center backdrop-blur-md transition-all duration-300 ${scrolled ? 'bg-black/60 border-white/20' : 'bg-black/40 border-white/10'}`}>
          <Link href="/" className="text-white font-semibold text-base sm:text-lg pl-2">
-           Datalumina
+           Hollerlabs
          </Link>
          <div className="hidden md:flex items-center space-x-6 sm:space-x-8">
            {['For Organizations', 'Cases', 'Insights', 'About'].map((item, index) => (

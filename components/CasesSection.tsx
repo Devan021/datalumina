@@ -12,8 +12,8 @@ const cases = [
     category: "FinTech",
     title: "Real-time Coin Data for Crypto Insiders",
     description: "Delivered lightning-fast cryptocurrency data to over 2 million monthly visitors, enhancing user experience and solidifying market position.",
-    logo: "/logos/crypto-insiders.svg",
-    image: "/cases/crypto-insiders.jpg",
+    logo: "/celestial.svg",
+    image: "/blue.jpg",
     metrics: [
       { label: "Response Time", value: "<200ms" },
       { label: "Monthly Visitors", value: "2M+" },
@@ -25,8 +25,8 @@ const cases = [
     category: "AI-Powered Support",
     title: "Transforming BLANK's Customer Service",
     description: "Revolutionized support for a leading e-commerce brand, dramatically improving response times and customer satisfaction with AI.",
-    logo: "/logos/blank.svg",
-    image: "/cases/blank.jpg",
+    logo: "/echo-valley.svg",
+    image: "/blue3.png",
     metrics: [
       { label: "Response Time", value: "-60%" },
       { label: "Customer Satisfaction", value: "+40%" },
@@ -38,8 +38,8 @@ const cases = [
     category: "Developer Tools",
     title: "Simplifying Embeddings with Timescale",
     description: "Partnered with Timescale to showcase innovative PostgreSQL extensions, simplifying complex embeddings for AI developers worldwide.",
-    logo: "/logos/timescale.svg",
-    image: "/cases/timescale.jpg",
+    logo: "/acme-corp.svg",
+    image: "/blue2.png",
     metrics: [
       { label: "Tutorial Views", value: "100K+" },
       { label: "GitHub Stars", value: "+2K" },
