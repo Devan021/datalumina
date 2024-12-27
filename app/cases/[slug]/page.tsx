@@ -6,34 +6,33 @@ import { Footer } from '@/components/Footer';
 // Define the type for case study keys
 type CaseStudyKey = keyof typeof caseStudies;
 
-// This would typically come from a CMS or API
 const caseStudies = {
-  'crypto-insiders': {
-    title: "Delivering real-time coin data to millions of Crypto Insiders visitors",
+  'solvemyhealth': {
+    title: "Enhancing Healthcare Support with AI-Powered Multimodal Chat Solutions for SOLVEMyHealth.",
     description:
-      "Crypto Insiders, the largest cryptocurrency news platform in the Netherlands, attracts over 2 million monthly visitors who rely on up-to-the-minute coverage of the crypto market. To enhance its position as an industry leader and elevate the customer experience, the platform set its sights on delivering real-time coin pricing data directly to its users.",
-    logo: "/logos/crypto-insiders.svg",
-    date: "Oct 15, 2023",
+      "SOLVEMyHealth, a leading health-tech platform, serves thousands of users monthly with innovative solutions to healthcare challenges. Committed to empowering individuals and enhancing patient care, the platform now focuses on delivering personalized, real-time health support through seamless AI-driven integrations.",
+    logo: "/solvemy.png",
+    date: "Nov 15, 2024",
     author: {
-      name: "Christan Doornhof",
-      role: "Strategy Lead",
-      avatar: "/team/christan-doornhof.jpg",
+      name: "Rajiv Ambat",
+      role: "CEO",
+      avatar: "/rajiv.jpeg",
     },
     details: {
-      location: "Amsterdam",
-      website: "https://www.crypto-insiders.nl/",
+      location: "Kochi",
+      website: "https://www.solvemyhealth.com/",
       industry: "News",
       impact: "Instant coin data to 2 million monthly visitors",
     },
     content: {
       challenge:
-        "Crypto Insider's existing infrastructure struggled to handle the demands of live updates, especially during high-traffic market surges, causing delays and outages. To stay ahead, they needed a fast, reliable, and scalable solution that could meet the expectations of their growing audience.",
+        "SOLVEMyHealth faced a growing need for a robust and scalable customer support solution capable of handling high volumes of patient inquiries across multiple channels. With increasing demand for personalized healthcare services, they required a seamless, real-time support system to improve engagement, resolve queries instantly, and ensure patients received timely and accurate information, especially during peak times.",
       mission:
-        "Our mission was to create a future-proof system that delivered real-time coin data seamlessly to Crypto Insider's visitors. We focused on engineering a solution that prioritized speed, reliability, and scalability—ensuring the platform could meet today's demands and handle tomorrow's growth.",
+        "Our mission was to design and implement an AI-powered, multimodal customer support system that could efficiently manage patient interactions across various channels, including chat, voice, and messaging. By leveraging the latest advancements in natural language processing (NLP) and retrieval-augmented generation (RAG), we aimed to create a responsive and reliable solution that would elevate the patient experience while supporting SOLVEMyHealth's long-term growth.",
       solution:
-        "We engineered a high-performance data delivery system tailored to Crypto Insider's needs. At the heart of the solution is a dedicated ingestion server that aggregates and verifies coin pricing data, ensuring every update is accurate and reliable. Paired with a dedicated caching layer, the system delivers blazing-fast response times under 200 milliseconds, keeping millions of visitors informed without missing a beat.\n\nTo guarantee the platform's resilience, we built a robust architecture to handle surges during volatile market events. The result? A scalable, future-proof system that supports Crypto Insider's rapid growth, ensuring their audience enjoys a seamless experience—every time they visit.",
+        "We implemented an AI-powered, multimodal customer support system for SOLVEMyHealth, utilizing natural language processing (NLP) and retrieval-augmented generation (RAG) to deliver real-time, personalized responses across text and voice channels. The system intelligently routes complex queries to human agents, ensuring seamless support and scalability for future growth.",
       results:
-        "The results speak for themselves—our solution delivered real-time coin pricing with response times under 200 milliseconds and 99% uptime, vastly improving the user experience for millions of visitors. CryptoInsiders can now handle peak traffic effortlessly, solidifying their position as the Netherlands' top cryptocurrency news platform.",
+        "The solution significantly enhanced patient satisfaction with faster, accurate responses, reducing wait times and improving engagement. SOLVEMyHealth now offers a seamless, scalable customer support experience, handling increasing volumes of inquiries efficiently while maintaining high service quality.",
     },
     background: "bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950",
   },

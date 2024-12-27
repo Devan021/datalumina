@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 
 const cases = [
   {
-    slug: "crypto-insiders",
+    slug: "solvemyhealth",
     category: "FinTech",
     title: "Real-time Coin Data for Crypto Insiders",
     description: "Delivered lightning-fast cryptocurrency data to over 2 million monthly visitors, enhancing user experience and solidifying market position.",
