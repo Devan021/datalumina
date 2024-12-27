@@ -13,7 +13,7 @@ const cases = [
     title: "Real-time Coin Data for Crypto Insiders",
     description: "Delivered lightning-fast cryptocurrency data to over 2 million monthly visitors, enhancing user experience and solidifying market position.",
     logo: "/celestial.svg",
-    image: "/blue.jpg",
+    image: "/data.png",
     metrics: [
       { label: "Response Time", value: "<200ms" },
       { label: "Monthly Visitors", value: "2M+" },
@@ -26,7 +26,7 @@ const cases = [
     title: "Transforming BLANK's Customer Service",
     description: "Revolutionized support for a leading e-commerce brand, dramatically improving response times and customer satisfaction with AI.",
     logo: "/echo-valley.svg",
-    image: "/blue3.png",
+    image: "/data1.png",
     metrics: [
       { label: "Response Time", value: "-60%" },
       { label: "Customer Satisfaction", value: "+40%" },
@@ -39,7 +39,7 @@ const cases = [
     title: "Simplifying Embeddings with Timescale",
     description: "Partnered with Timescale to showcase innovative PostgreSQL extensions, simplifying complex embeddings for AI developers worldwide.",
     logo: "/acme-corp.svg",
-    image: "/blue2.png",
+    image: "/data.png",
     metrics: [
       { label: "Tutorial Views", value: "100K+" },
       { label: "GitHub Stars", value: "+2K" },

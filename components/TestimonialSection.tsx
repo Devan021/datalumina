@@ -18,20 +18,20 @@ export function TestimonialSection() {
        >
          <Quote className="w-16 h-16 text-blue-500 mx-auto mb-8" />
          <Image
-           src="/testimonial-avatar.jpg"
+           src="/rajiv.jpg"
            alt="Testimonial"
            width={80}
            height={80}
            className="rounded-full mx-auto mb-6 border-4 border-blue-500/20"
          />
          <blockquote className="text-2xl text-white mb-8 font-medium leading-relaxed">
-           "Together with Datalumina, we developed a state-of-the-art AI model project. In a rapidly evolving landscape, they've proven to be an invaluable partner."
+           "Together with Hollerlabs, we developed a state-of-the-art AI model project. In a rapidly evolving landscape, they've proven to be an invaluable partner."
          </blockquote>
          <div className="flex flex-col items-center space-y-2">
            <Button variant="link" className="text-xl text-blue-400 hover:text-blue-300">
-             Martin Wagner
+             Rajiv Ambat
            </Button>
-           <p className="text-blue-100/60">Chief Technology Officer, TechCorp</p>
+           <p className="text-blue-100/60">Chief Executive Officer, SolveMyHealth</p>
            <Button variant="link" className="text-blue-400 hover:text-blue-300 mt-4">
              Read the full case study
            </Button>

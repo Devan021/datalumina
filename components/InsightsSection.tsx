@@ -10,34 +10,34 @@ const insights = [
   {
     title: "The Future of AI in Business",
     description: "Exploring how artificial intelligence is reshaping industries and driving innovation across sectors.",
-    image: "/insights/ai-business-future.jpg",
+    image: "/futureofai.jpg",
     category: "AI Trends",
     author: {
       name: "Dr. Emily Chen",
       role: "AI Research Lead",
-      avatar: "/team/emily-chen.jpg"
+      avatar: "/devan.jpg"
     }
   },
   {
     title: "Implementing Ethical AI Practices",
     description: "A deep dive into the importance of ethical considerations in AI development and deployment.",
-    image: "/insights/ethical-ai.jpg",
+    image: "/aiethics.png",
     category: "AI Ethics",
     author: {
       name: "Michael Johnson",
       role: "Ethics Specialist",
-      avatar: "/team/michael-johnson.jpg"
+      avatar: "/eswar.jpeg"
     }
   },
   {
     title: "Optimizing Data Pipelines for AI",
     description: "Best practices for building efficient and scalable data pipelines to fuel your AI initiatives.",
-    image: "/insights/data-pipelines.jpg",
+    image: "/datapipe.png",
     category: "Data Engineering",
     author: {
       name: "Sarah Thompson",
       role: "Lead Data Engineer",
-      avatar: "/team/sarah-thompson.jpg"
+      avatar: "/eswar.jpeg"
     }
   }
 ]
