@@ -21,31 +21,31 @@ const cases = [
     ]
   },
   {
-    slug: "blank-customer-service",
-    category: "AI-Powered Support",
-    title: "Transforming BLANK's Customer Service",
-    description: "Revolutionized support for a leading e-commerce brand, dramatically improving response times and customer satisfaction with AI.",
-    logo: "/echo-valley.svg",
-    image: "/data1.png",
+    slug: "innpixelai",
+    category: "AI-Powered Automation",
+    title: "Supercharging Operations with AI Automation for InnPixel",
+    description: "InnPixel AI revolutionized their operations with AI-powered automation, significantly improving client onboarding and scaling their operations without increasing headcount.",
+    logo: "/innpixel.png",
+    image: "/data1.png", // Replace with actual image if needed
     metrics: [
-      { label: "Response Time", value: "-60%" },
-      { label: "Customer Satisfaction", value: "+40%" },
-      { label: "Tickets Automated", value: "70%" }
+      { label: "Client Onboarding Efficiency", value: "+90%" },
+      { label: "Report Generation Time", value: "-80%" },
+      { label: "Client Handling Capacity", value: "+25%" }
     ]
   },
   {
-    slug: "timescale-embeddings",
-    category: "Developer Tools",
-    title: "Simplifying Embeddings with Timescale",
-    description: "Partnered with Timescale to showcase innovative PostgreSQL extensions, simplifying complex embeddings for AI developers worldwide.",
-    logo: "/acme-corp.svg",
-    image: "/data.png",
+    slug: "greenviewrealty",
+    category: "AI-Powered Real Estate Support",
+    title: "Transforming Real Estate Engagement with AI Agents for GreenView Realty",
+    description: "GreenView Realty implemented AI-driven agents, resulting in faster response times and improved sales conversions by automating customer interactions.",
+    logo: "/greenview.jpeg",
+    image: "/data.png", // Replace with actual image if needed
     metrics: [
-      { label: "Tutorial Views", value: "100K+" },
-      { label: "GitHub Stars", value: "+2K" },
-      { label: "Developer Adoption", value: "+150%" }
+      { label: "Response Time Reduction", value: "-40%" },
+      { label: "Sales Conversions Increase", value: "+30%" },
+      { label: "AI-Agent Interactions", value: "100K+" }
     ]
-  },
+  }  
 ]
 
 export function CasesSection() {

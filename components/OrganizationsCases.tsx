@@ -6,25 +6,25 @@ import Link from 'next/link'
 
 const cases = [
   {
-    category: "Software Development",
-    title: "Delivering real-time coin data to millions of Crypto...",
-    description: "Crypto Insiders, the largest cryptocurrency news platform in the Netherlands, offered over 7 million...",
-    image: "/cases/crypto-insiders.jpg",
-    logo: "/logos/crypto-insiders.svg"
+    category: "AI-Powered Support",
+    title: "Revolutionizing Customer Service for Solve",
+    description: "Solve implemented AI-driven solutions to streamline their customer support processes, leading to faster response times and higher customer satisfaction.",
+    image: "/data.png",
+    logo: "/solve.jpg"
   },
   {
-    category: "AI Engineering",
-    title: "Transforming BLANK's customer service with AI",
-    description: "BLANK is a prominent e-commerce brand focused on sunglasses, with over 200k customers around the world. Their customer support team faced challenges in managing high-ticket volumes while maintaining...",
-    image: "/cases/blank.jpg",
-    logo: "/logos/blank.svg"
+    category: "AI-Powered Automation",
+    title: "Supercharging Operations with AI Automation for InnPixel",
+    description: "InnPixel AI revolutionized their operations with AI-powered automation, significantly improving client onboarding and scaling their operations without increasing headcount.",
+    image: "/data1.png",
+    logo: "/innpixel.png"
   },
   {
-    category: "YouTube Collaboration",
-    title: "Partnering with Timescale to simplify embeddings for AI developers",
-    description: "This case highlights the collaboration with Timescale to showcase their innovative PostgreSQL extensions, pgvector/timescale and pgtl. Through a series of tutorials...",
-    image: "/cases/timescale.jpg",
-    logo: "/logos/timescale.svg"
+    category: "Real Estate AI Support",
+    title: "Transforming Real Estate Engagement with AI Agents for GreenView Realty",
+    description: "GreenView Realty implemented AI-driven agents, resulting in faster response times and improved sales conversions by automating customer interactions.",
+    image: "/data.png",
+    logo: "/greenview.jpeg"
   }
 ]
 
@@ -85,7 +85,7 @@ export function OrganizationsCases() {
           transition={{ delay: 0.3, duration: 0.5 }}
           className="mt-12 sm:mt-16"
         >
-          <div className="rounded-3xl bg-gradient-to-r from-blue-600 to-blue-400 p-6 sm:p-8 md:p-12 flex flex-col sm:flex-row items-center justify-between">
+          <div className="rounded-3xl bg-gradient-to-r from-blue-950 via-blue-900  to-blue-1000 p-6 sm:p-8 md:p-12 flex flex-col sm:flex-row items-center justify-between">
             <div className="mb-6 sm:mb-0 text-center sm:text-left">
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
                 Let's talk about how we can help you get from complexity to capability

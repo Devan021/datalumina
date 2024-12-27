@@ -78,7 +78,7 @@ const caseStudies = {
     },
     details: {
       location: "Los Angeles, CA",
-      website: "https://www.greenviewrealty.com",
+      website: "https://thegreenviewrealtors.com/",
       industry: "Real Estate",
       impact: "40% reduction in response time, 30% increase in conversions",
     },

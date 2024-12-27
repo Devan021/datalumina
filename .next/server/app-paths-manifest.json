@@ -4,7 +4,7 @@
   "/cases/page": "app/cases/page.js",
   "/for-organizations/page": "app/for-organizations/page.js",
   "/page": "app/page.js",
-  "/about/page": "app/about/page.js",
   "/contact/page": "app/contact/page.js",
-  "/insights/page": "app/insights/page.js"
+  "/insights/page": "app/insights/page.js",
+  "/about/page": "app/about/page.js"
 }

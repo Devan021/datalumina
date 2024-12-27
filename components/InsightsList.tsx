@@ -9,33 +9,33 @@ const insights = [
   {
     title: "The Future of AI in Business",
     description: "Exploring how artificial intelligence is reshaping industries and driving innovation.",
-    image: "/insight-ai-business.jpg",
+    image: "/demo.jpg",
     author: {
-      name: "Dr. Emily Chen",
+      name: "Dr Aswin Santiago",
       role: "AI Research Lead",
-      avatar: "/avatars/emily-chen.jpg"
+      avatar: "/avatar-ashwin-santiago.jpg"
     },
     category: "Artificial Intelligence"
   },
   {
     title: "Data Privacy in the Age of Big Data",
     description: "Navigating the complex landscape of data protection and ethical use of information.",
-    image: "/insight-data-privacy.jpg",
+    image: "/demo.jpg",
     author: {
-      name: "Michael Johnson",
+      name: "Florence Shaw",
       role: "Data Ethics Specialist",
-      avatar: "/avatars/michael-johnson.jpg"
+      avatar: "/avatar-florence-shaw.jpg"
     },
     category: "Data Ethics"
   },
   {
     title: "Machine Learning for Predictive Maintenance",
     description: "How ML is revolutionizing equipment maintenance across industries.",
-    image: "/insight-predictive-maintenance.jpg",
+    image: "/demo.jpg",
     author: {
-      name: "Sarah Thompson",
+      name: "Owen Garcia",
       role: "ML Engineer",
-      avatar: "/avatars/sarah-thompson.jpg"
+      avatar: "/avatar-owen-garcia.jpg"
     },
     category: "Machine Learning"
   }
