@@ -66,7 +66,7 @@ export function ServicesSection() {
                    {service.description}
                  </p>
                  <Link 
-                   href="#" 
+                   href="/for-organizations" 
                    className="inline-flex items-center text-white hover:text-blue-200 transition-colors group mt-auto"
                  >
                    READ MORE <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -97,7 +97,7 @@ export function ServicesSection() {
                    {service.description}
                  </p>
                  <Link 
-                   href="#" 
+                   href="/for-organizations" 
                    className="inline-flex items-center text-white hover:text-blue-200 transition-colors group mt-auto"
                  >
                    READ MORE <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
