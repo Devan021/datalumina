@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Hollerlabs - AI Agents",
   description: "Next-generation AI and data solutions for accelerated business success - Simplifying Your Future with AI Agents",
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon2.png",
   },
 }
 
