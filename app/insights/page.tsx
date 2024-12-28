@@ -5,7 +5,7 @@ import { InsightsList } from '@/components/InsightsList'
 import { Footer } from '@/components/Footer'
 
 export const metadata = {
-  title: 'Insights | Datalumina',
+  title: 'Insights | Hollerlabs',
   description: 'Explore our latest insights on AI, data science, and technology trends.',
 }
 

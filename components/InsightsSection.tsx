@@ -8,35 +8,38 @@ import Link from 'next/link'
 
 const insights = [
   {
-    title: "The Future of AI in Business",
-    description: "Exploring how artificial intelligence is reshaping industries and driving innovation across sectors.",
-    image: "/futureofai.jpg",
-    category: "AI Trends",
+    id: "future-of-ai-in-business",
+    title: "Why Generative AI Often Fails to Deliver Value",
+    description: "Many organizations rush to implement generative AI without proper planning and infrastructure, leading to failed initiatives and wasted resources.",
+    image: "/data.png",
+    category: "AI Implementation",
     author: {
-      name: "Dr. Emily Chen",
-      role: "AI Research Lead",
+      name: "Deva Nandhan",
+      role: "Chief Technology Officer",
       avatar: "/devan.jpg"
     }
   },
   {
-    title: "Implementing Ethical AI Practices",
-    description: "A deep dive into the importance of ethical considerations in AI development and deployment.",
-    image: "/aiethics.png",
-    category: "AI Ethics",
+    id: "how-ai-revolutionizes-healthcare",
+    title: "How AI is Revolutionizing Healthcare",
+    description: "Artificial Intelligence is transforming healthcare by improving patient outcomes, streamlining tasks, and advancing medical research.",
+    image: "/healthcareai.jpg",
+    category: "AI in Healthcare",
     author: {
-      name: "Michael Johnson",
-      role: "Ethics Specialist",
+      name: "Eswar Lakkakula",
+      role: "Strategy Lead",
       avatar: "/eswar.jpeg"
     }
   },
   {
-    title: "Optimizing Data Pipelines for AI",
-    description: "Best practices for building efficient and scalable data pipelines to fuel your AI initiatives.",
-    image: "/datapipe.png",
-    category: "Data Engineering",
+    id: "ai-transforming-b2b-sales",
+    title: "How AI is Transforming B2B Sales Strategies",
+    description: "AI is enabling B2B companies to personalize customer interactions, improve lead scoring, and optimize sales strategies for better results.",
+    image: "/b2b.png",
+    category: "AI in Business",
     author: {
-      name: "Sarah Thompson",
-      role: "Lead Data Engineer",
+      name: "Eswar Lakkakula",
+      role: "Strategy Lead",
       avatar: "/eswar.jpeg"
     }
   }
@@ -58,7 +61,7 @@ export function InsightsSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {insights.map((insight, index) => (
             <motion.div
-              key={insight.title}
+              key={insight.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
@@ -102,9 +105,12 @@ export function InsightsSection() {
                   <Button 
                     variant="ghost"
                     className="text-blue-400 hover:text-blue-300 p-0"
+                    asChild
                   >
-                    READ ARTICLE
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <Link href={`/insights/${insight.id}`}>
+                      READ ARTICLE
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -124,4 +130,3 @@ export function InsightsSection() {
     </section>
   )
 }
-
