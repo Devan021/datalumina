@@ -86,7 +86,7 @@ const insights: Record<string, Insight> = {
   While AI offers immense benefits, it also comes with challenges. Data privacy concerns, integration with existing tools, and the need for sales teams to adapt to AI-driven workflows are key considerations. Companies must invest in training and change management to fully capitalize on AI's potential.
 
   As AI continues to evolve, its ability to transform B2B sales will only grow. Organizations that embrace AI-driven strategies will gain a competitive edge by delivering more value to their clients and achieving greater operational efficiency.`,
-  image: "/b2b.png"
+  image: "/b2b.jpg"
 }
 
 

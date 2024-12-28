@@ -1,6 +1,6 @@
 1:HL["/_next/static/media/3a300a8b42167374-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 2:HL["/_next/static/css/7ac839a85a870728.css","style",{"crossOrigin":""}]
-0:["3rBUcyrpjCo2zSWqj-CKl",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/7ac839a85a870728.css","precedence":"next","crossOrigin":""}]],"$L4"]]]]
+0:["2k9fZ6nVS5xxQQp4sHKmz",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/7ac839a85a870728.css","precedence":"next","crossOrigin":""}]],"$L4"]]]]
 5:I[6954,[],""]
 6:I[7264,[],""]
 4:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Datalumina v4.10 - AI-Powered Business Transformation"}],["$","meta","2",{"name":"description","content":"Next-generation AI and data solutions for accelerated business success - Version 4.10 with enhanced responsiveness, consistent button styling, and optimized performance"}],["$","meta","3",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","link","4",{"rel":"icon","href":"/favicon.ico"}],["$","meta","5",{"name":"next-size-adjust"}]]

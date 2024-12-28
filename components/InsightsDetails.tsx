@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
+import { useState, useEffect } from 'react'
 
 interface InsightDetailProps {
   title: string
@@ -19,6 +20,33 @@ interface InsightDetailProps {
 }
 
 export function InsightDetail({ title, category, date, author, content, image }: InsightDetailProps) {
+  const [currentUrl, setCurrentUrl] = useState('')
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setCurrentUrl(window.location.href)
+    }
+  }, [])
+
+  const handleTwitterShare = () => {
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+      `${title} - ${currentUrl}`
+    )}`
+    window.open(twitterUrl, '_blank')
+  }
+
+  const handleLinkedInShare = () => {
+    const linkedInUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
+      currentUrl
+    )}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(content)}`
+    window.open(linkedInUrl, '_blank')
+  }
+
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(currentUrl)
+    alert('Link copied to clipboard!')
+  }
+
   return (
     <article className="relative min-h-screen">
       <div className="max-w-7xl mx-auto px-4 py-12">
@@ -80,13 +108,22 @@ export function InsightDetail({ title, category, date, author, content, image }:
                     Share this article
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    <button className="px-4 py-2 bg-blue-500/10 hover:bg-blue-500/20 text-blue-300 rounded-full transition-colors">
+                    <button
+                      onClick={handleTwitterShare}
+                      className="px-4 py-2 bg-blue-500/10 hover:bg-blue-500/20 text-blue-300 rounded-full transition-colors"
+                    >
                       Twitter
                     </button>
-                    <button className="px-4 py-2 bg-blue-500/10 hover:bg-blue-500/20 text-blue-300 rounded-full transition-colors">
+                    <button
+                      onClick={handleLinkedInShare}
+                      className="px-4 py-2 bg-blue-500/10 hover:bg-blue-500/20 text-blue-300 rounded-full transition-colors"
+                    >
                       LinkedIn
                     </button>
-                    <button className="px-4 py-2 bg-blue-500/10 hover:bg-blue-500/20 text-blue-300 rounded-full transition-colors">
+                    <button
+                      onClick={handleCopyLink}
+                      className="px-4 py-2 bg-blue-500/10 hover:bg-blue-500/20 text-blue-300 rounded-full transition-colors"
+                    >
                       Copy Link
                     </button>
                   </div>
@@ -99,4 +136,3 @@ export function InsightDetail({ title, category, date, author, content, image }:
     </article>
   )
 }
-
