@@ -8,10 +8,10 @@ const kanit = Kanit({subsets: ['latin'], weight:['200']})
 
 
 export const metadata: Metadata = {
-  title: "Datalumina v4.10 - AI-Powered Business Transformation",
-  description: "Next-generation AI and data solutions for accelerated business success - Version 4.10 with enhanced responsiveness, consistent button styling, and optimized performance",
+  title: "Hollerlabs - AI Agents",
+  description: "Next-generation AI and data solutions for accelerated business success - Simplifying Your Future with AI Agents",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.png",
   },
 }
 

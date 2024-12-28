@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
+import Link from 'next/link'
 
 const solutions = [
   {
@@ -32,7 +33,7 @@ const solutions = [
 
 export function SolutionsGrid() {
   return (
-    <section className="relative py-16 sm:py-24 px-4 overflow-hidden">
+    <section id="solutions" className="relative py-16 sm:py-24 px-4 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {solutions.map((solution, index) => (
@@ -54,10 +55,12 @@ export function SolutionsGrid() {
                   {solution.description}
                 </p>
                 <div className="mt-auto">
+                  <Link href="/contact" passHref>
                   <button className="text-blue-400 hover:text-blue-300 flex items-center text-sm font-medium">
                     Learn more
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </button>
+                  </Link>
                 </div>
               </div>
             </motion.div>

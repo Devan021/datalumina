@@ -7,21 +7,21 @@ import Link from 'next/link'
 const services = [
  {
    number: "01",
-   label: "Datalumina",
+   label: "Hollerlabs",
    title: "Development",
    subtitle: "Custom AI solutions & data platforms",
    description: "Whether it's data warehousing or intelligent systems, we architect and implement scalable solutions that transform complex problems into competitive advantages for our clients."
  },
  {
    number: "02",
-   label: "Datalumina",
+   label: "Hollerlabs",
    title: "Consulting",
    subtitle: "Strategic AI implementation & transformation",
    description: "We guide organizations and startups through their AI journey, combining deep technical expertise with strong strategic insight."
  },
  {
    number: "03",
-   label: "Datalumina",
+   label: "Hollerlabs",
    title: "Training",
    subtitle: "Comprehensive AI education",
    description: "We empower teams with the knowledge and skills needed to leverage AI effectively, ensuring long-term success and innovation."

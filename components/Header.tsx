@@ -23,9 +23,16 @@ export function Header() {
    <header className={`fixed top-0 w-full z-50 px-4 sm:px-6 transition-all duration-300 ${scrolled ? 'py-2' : 'py-4'}`}>
      <div className="max-w-7xl mx-auto">
        <nav className={`glass-card rounded-full px-3 sm:px-6 py-2 sm:py-3 flex justify-between items-center backdrop-blur-md transition-all duration-300 ${scrolled ? 'bg-black/60 border-white/20' : 'bg-black/40 border-white/10'}`}>
-         <Link href="/" className="text-white font-semibold text-base sm:text-lg pl-2">
-           Hollerlabs
-         </Link>
+         <div className="flex items-center space-x-2">
+           <img 
+             src="/favicon.png" 
+             alt="Logo" 
+             className="w-6 h-6 sm:w-8 sm:h-8 rounded-full"
+           />
+           <Link href="/" className="text-white font-semibold text-base sm:text-lg">
+             Hollerlabs
+           </Link>
+         </div>
          <div className="hidden md:flex items-center space-x-6 sm:space-x-8">
            {['For Organizations', 'Cases', 'Insights', 'About'].map((item, index) => (
              <motion.div
@@ -95,4 +102,3 @@ export function Header() {
    </header>
  )
 }
-

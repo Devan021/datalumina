@@ -30,7 +30,7 @@ const cases = [
 
 export function OrganizationsCases() {
   return (
-    <section className="relative py-20 sm:py-32 px-4 overflow-hidden">
+    <section id="organization-cases" className="relative py-20 sm:py-32 px-4 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -91,12 +91,14 @@ export function OrganizationsCases() {
                 Let's talk about how we can help you get from complexity to capability
               </h3>
             </div>
+            <Link href="/contact" passHref>
             <Button 
               className="bg-white text-blue-600 hover:bg-white/90 rounded-full px-6 py-2 text-sm sm:text-base"
             >
               Contact us
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
+            </Link>
           </div>
         </motion.div>
       </div>
