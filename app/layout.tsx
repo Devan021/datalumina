@@ -1,8 +1,11 @@
 import "@/styles/globals.css"
 import { Inter } from 'next/font/google'
 import { Metadata } from 'next'
+import { Kanit } from "next/font/google"
 
-const inter = Inter({ subsets: ["latin"] })
+const kanit = Kanit({subsets: ['latin'], weight:['200']})
+
+
 
 export const metadata: Metadata = {
   title: "Datalumina v4.10 - AI-Powered Business Transformation",
@@ -12,6 +15,8 @@ export const metadata: Metadata = {
   },
 }
 
+
+
 export default function RootLayout({
   children,
 }: {
@@ -19,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} min-h-screen bg-[#020B2D]`}>
+      <body className={`${kanit.className} min-h-screen bg-[#020B2D]`}>
         {children}
       </body>
     </html>

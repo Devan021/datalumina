@@ -44,7 +44,7 @@ const insights = [
 
 export function InsightsSection() {
   return (
-    <section className="relative py-32 px-4 overflow-hidden bg-[#020B2D]">
+    <section className="relative py-32 px-4 overflow-hidden bg-gradient-to-b from-black via-blue-800 to-black">
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

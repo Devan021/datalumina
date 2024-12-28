@@ -14,7 +14,7 @@ const partners = [
 
 export function PartnerLogos() {
  return (
-   <div className="relative bg-gradient-to-b from-black/50 to-blue-950/30 border-y border-white/10 overflow-hidden py-16 backdrop-blur-sm">
+   <div className="relative bg-black border-y border-white/10 overflow-hidden py-16 backdrop-blur-sm">
      <div className="max-w-7xl mx-auto px-4">
        <motion.div
          initial={{ opacity: 0, y: 20 }}

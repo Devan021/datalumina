@@ -50,7 +50,7 @@ const cases = [
 
 export function CasesSection() {
   return (
-    <section className="relative py-24 sm:py-32 px-4 overflow-hidden bg-[#020B2D]">
+    <section className="relative py-24 sm:py-32 px-4 overflow-hidden bg-gradient-to-b from-black via-black to-blue-950/50">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

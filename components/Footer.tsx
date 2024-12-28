@@ -44,7 +44,7 @@ export function Footer() {
 
   return (
     <motion.footer
-      className="relative py-20 sm:py-32 px-4 overflow-hidden bg-gradient-to-b from-blue-950/50 to-black/50 backdrop-blur-sm"
+      className="relative py-20 sm:py-32 px-4 overflow-hidden bg-gradient-to-b from-black to-black/50 backdrop-blur-sm"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -87,7 +87,7 @@ export function Footer() {
           transition={{ delay: 0.4 }}
         >
           <p className="text-blue-100/60 mb-4 sm:mb-0">
-            © {currentYear} Datalumina. All rights reserved. | v4.22.0
+            © {currentYear} Hollerlabs. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <Link href="#" className="text-blue-100/60 hover:text-white transition-colors">

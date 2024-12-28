@@ -9,12 +9,18 @@ import { InsightsSection } from '@/components/InsightsSection'
 import { TestimonialSection } from '@/components/TestimonialSection'
 import { CtaSection } from '@/components/CtaSection'
 import { Footer } from '@/components/Footer'
+import { Kanit } from 'next/font/google'
+
+const kanit = Kanit({subsets: ['latin'], weight:['200']})
+
 
 export default function Home() {
   return (
+
+    
     <div className="min-h-screen bg-black">
       <Header />
-      <main>
+      <main className={kanit.className}>
         <Suspense fallback={<div>Loading...</div>}>
           <HeroSection />
         </Suspense>

@@ -30,7 +30,7 @@ const services = [
 
 export function ServicesSection() {
  return (
-   <section className="relative py-32 px-4 overflow-hidden bg-[#020B2D]">
+   <section className="relative py-32 px-4 overflow-hidden bg-gradient-to-b from-black   via-blue-800 to-blue-990/50">
      <div className="max-w-7xl mx-auto relative z-10">
        <motion.div
          initial={{ opacity: 0, y: 20 }}

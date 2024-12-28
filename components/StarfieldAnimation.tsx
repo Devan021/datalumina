@@ -12,6 +12,7 @@ interface Star {
 
 export function StarfieldAnimation() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
+  const animationRef = useRef<number | null>(null)
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -39,7 +40,7 @@ export function StarfieldAnimation() {
       })
     }
 
-    function animateStars() {
+    const animateStars = () => {
       if (!ctx || !canvas) return // Ensure ctx and canvas are defined
 
       ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -47,6 +48,7 @@ export function StarfieldAnimation() {
         star.y -= star.speed
         if (star.y < 0) {
           star.y = canvas.height
+          star.x = Math.random() * canvas.width
           star.color = `rgba(0, 0, 139, ${Math.random() * 0.5 + 0.5})` // Transition to dark blue
         }
 
@@ -55,12 +57,15 @@ export function StarfieldAnimation() {
         ctx.fillStyle = star.color
         ctx.fill()
       })
-      requestAnimationFrame(animateStars)
+      animationRef.current = requestAnimationFrame(animateStars)
     }
 
     animateStars()
 
     return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current)
+      }
       window.removeEventListener('resize', resizeCanvas)
     }
   }, [])

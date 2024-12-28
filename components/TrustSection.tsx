@@ -6,7 +6,7 @@ import { Shield, Zap, Users, Target, Eye, BarChart } from 'lucide-react'
 export function TrustSection() {
   return (
     <section className="relative py-32 px-4 overflow-hidden bg-[url('/trust-bg.jpg')] bg-cover bg-center">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#000213] via-[#000213]/95 to-blue-950/90"></div>
+      <div className="absolute inset-0 bg-transparent"></div>
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -18,7 +18,7 @@ export function TrustSection() {
             Why our clients trust us
           </h2>
           <p className="text-lg text-gray-300">
-            At Datalumina, we bring together a decade of AI engineering, software development, and 
+            At Hollerlabs, we bring together a decade of AI engineering, software development, and 
             enterprise consulting experience to help you cut through the noise and transform 
             possibilities into practical solutions.
           </p>
