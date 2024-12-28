@@ -25,7 +25,7 @@ export function Header() {
        <nav className={`glass-card rounded-full px-3 sm:px-6 py-2 sm:py-3 flex justify-between items-center backdrop-blur-md transition-all duration-300 ${scrolled ? 'bg-black/60 border-white/20' : 'bg-black/40 border-white/10'}`}>
          <div className="flex items-center space-x-2">
            <img 
-             src="/favicon.png" 
+             src="/hl.png" 
              alt="Logo" 
              className="w-6 h-6 sm:w-8 sm:h-8 rounded-full"
            />

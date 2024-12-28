@@ -1237,9 +1237,6 @@ video {
 .rounded-xl {
   border-radius: 0.75rem;
 }
-.rounded {
-  border-radius: 0.25rem;
-}
 .border {
   border-width: 1px;
 }
@@ -2586,16 +2583,16 @@ video {
     width: 1.5rem;
   }
 
+  .sm\:w-8 {
+    width: 2rem;
+  }
+
   .sm\:w-\[600px\] {
     width: 600px;
   }
 
   .sm\:w-auto {
     width: auto;
-  }
-
-  .sm\:w-8 {
-    width: 2rem;
   }
 
   .sm\:grid-cols-2 {

@@ -1,1 +1,1 @@
-self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/home/devan/datalumina/app/layout\":[\"static/media/3a300a8b42167374-s.p.woff2\"],\"/home/devan/datalumina/app/page\":[\"static/media/3a300a8b42167374-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/home/devan/datalumina/app/page\":[\"static/media/3a300a8b42167374-s.p.woff2\"],\"/home/devan/datalumina/app/layout\":[\"static/media/3a300a8b42167374-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"

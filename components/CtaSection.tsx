@@ -20,13 +20,12 @@ export function CtaSection() {
           <span className="text-blue-400 to text-xl">
             Ready</span>
             <span className="text-blue-400 to text-xl">to</span>
-            <span className="text-blue-400 to text-xl">talk</span>
-            <span className="text-blue-400 to text-xl">data</span>
+            <span className="text-blue-400 to text-xl">talkAI</span>
           
           
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-white leading-tight">
-            Let's turn complexity<br />
-            into capability
+            Let's simplify<br />
+            your future
           </h2>
           
           <p className="text-lg text-white/90 max-w-2xl mx-auto">
