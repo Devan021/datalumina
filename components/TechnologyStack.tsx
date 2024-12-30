@@ -2,7 +2,9 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Database, Cloud, Cpu, Container, Zap, Code } from "lucide-react";
+import { Database, Cloud, Cpu, Container, Zap, Code, Server } from 'lucide-react'
+
+
 
 // Define the interface for a technology
 interface Tech {
@@ -20,13 +22,13 @@ interface TechIconProps {
 
 // List of technologies with their icons and colors
 const technologies: Tech[] = [
-  { name: "Docker", icon: Container, color: "rgb(30, 64, 175)" },
-  { name: "PostgreSQL", icon: Database, color: "rgb(37, 99, 235)" },
-  { name: "FastAPI", icon: Zap, color: "rgb(59, 130, 246)" },
-  { name: "CPU", icon: Cpu, color: "rgb(96, 165, 250)" },
-  { name: "OpenAI", icon: Cloud, color: "rgb(37, 99, 235)" },
-  { name: "Azure", icon: Cloud, color: "rgb(30, 64, 175)" },
-  { name: "Node.js", icon: Cpu, color: "rgb(30, 58, 138)" },
+  { name: 'Docker', icon: Container, color: 'rgb(30, 64, 175)' },
+  { name: 'PostgreSQL', icon: Database, color: 'rgb(37, 99, 235)' },
+  { name: 'FastAPI', icon: Zap, color: 'rgb(59, 130, 246)' },
+  { name: 'CPU', icon: Cpu, color: 'rgb(96, 165, 250)' },
+  { name: 'OpenAI', icon: Cloud, color: 'rgb(37, 99, 235)' },
+  { name: 'Azure', icon: Server, color: 'rgb(30, 64, 175)' },
+  { name: 'Node.js', icon: Code, color: 'rgb(30, 58, 138)' }
 ];
 
 // TechIcon component
@@ -104,7 +106,7 @@ const TechIcon: React.FC<TechIconProps> = ({ tech, index, isCenter }) => {
 // TechnologyStack component
 export function TechnologyStack() {
   return (
-    <section className="relative py-32 overflow-hidden bg-gradient-to-b from-blue-950 to-[#020B2D]">
+    <section className="relative py-32 overflow-hidden bg-gradient-to-b from-black via-black to-blue-800">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500/10 via-transparent to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">

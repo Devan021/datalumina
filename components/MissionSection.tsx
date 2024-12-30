@@ -15,7 +15,7 @@ export function MissionSection() {
          <div className="space-y-6">
            <h2 className="text-3xl sm:text-4xl font-bold text-white">Our Mission</h2>
            <p className="text-blue-100/80 text-lg">
-             At Datalumina, we believe in the transformative power of AI and data. 
+             At Hollerlabs, we believe in the transformative power of AI and data. 
              Our mission is to help organizations navigate the complexities of modern 
              technology and emerge stronger, more efficient, and ready for the future.
            </p>
