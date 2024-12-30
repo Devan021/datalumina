@@ -10,33 +10,31 @@ const footerLinks = [
   {
     title: "Programs",
     links: [
-      { name: "AI Development", href: "#" },
-      { name: "Consulting", href: "#" },
-      { name: "Training", href: "#" },
+      { name: "AI Development", href: "#services" },
+      { name: "Consulting", href: "#services" },
+      { name: "Training", href: "#services" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { name: "Documentation", href: "#" },
-      { name: "API Reference", href: "#" },
-      { name: "Blog", href: "#" },
+      { name: "Cases", href: "/cases" },
+      { name: "Blog", href: "/insights" },
     ],
   },
   {
     title: "Company",
     links: [
-      { name: "About", href: "#" },
-      { name: "Careers", href: "#" },
-      { name: "Contact", href: "#" },
+      { name: "About", href: "/about" },
+      { name: "Contact", href: "/contact" },
     ],
   },
 ]
 
 const socialLinks = [
-  { name: "Twitter", icon: Twitter, href: "#" },
-  { name: "LinkedIn", icon: Linkedin, href: "#" },
-  { name: "GitHub", icon: Github, href: "#" },
+  { name: "Twitter", icon: Twitter, href: "https://x.com/devan_s_p" },
+  { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/company/hollerlabs/" },
+  { name: "GitHub", icon: Github, href: "https://github.com/Devan021" },
 ]
 
 export function Footer() {
@@ -90,10 +88,10 @@ export function Footer() {
             © {currentYear} Hollerlabs. All rights reserved.
           </p>
           <div className="flex space-x-6">
-            <Link href="#" className="text-blue-100/60 hover:text-white transition-colors">
+            <Link href="/privacy" className="text-blue-100/60 hover:text-white transition-colors">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-blue-100/60 hover:text-white transition-colors">
+            <Link href="/terms" className="text-blue-100/60 hover:text-white transition-colors">
               Terms of Service
             </Link>
           </div>
