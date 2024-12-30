@@ -27,7 +27,7 @@ export function PartnerLogos() {
     if (!scrollContainer) return
 
     const scrollWidth = scrollContainer.scrollWidth
-    const animationDuration = scrollWidth / 150 // Adjusted for responsive speed
+    const animationDuration = scrollWidth / 50 // Significantly increased speed
 
     scrollContainer.style.setProperty('--scroll-width', `${scrollWidth}px`)
     scrollContainer.style.setProperty('--animation-duration', `${animationDuration}s`)
@@ -46,25 +46,25 @@ export function PartnerLogos() {
   }, [controls])
 
   return (
-    <section className="relative bg-gradient-to-b from-[#000510] via-[#001030] to-[#000510] overflow-hidden py-16 sm:py-20 md:py-32">
-      <div className="container mx-auto px-4 mb-12 md:mb-16">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mb-4 sm:mb-6 tracking-tight">
+    <section className="relative bg-gradient-to-b from-[#000510] via-[#001030] to-[#000510] overflow-hidden py-32">
+      <div className="container mx-auto px-4 mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-6 tracking-tight">
           Powered by Cutting Edge Technologies
         </h2>
-        <p className="text-lg sm:text-xl text-gray-300 text-center max-w-lg sm:max-w-2xl mx-auto leading-relaxed">
+        <p className="text-xl text-gray-300 text-center max-w-3xl mx-auto leading-relaxed">
           Our platform uses cutting-edge technologies to create pure innovation for your business,
           driving the future of AI-driven technologies.
         </p>
       </div>
 
       {/* Gradient masks for fade effects */}
-      <div className="absolute inset-y-0 left-0 w-16 sm:w-24 md:w-[300px] bg-gradient-to-r from-[#000510] to-transparent z-10" />
-      <div className="absolute inset-y-0 right-0 w-16 sm:w-24 md:w-[300px] bg-gradient-to-l from-[#000510] to-transparent z-10" />
-
+      <div className="absolute inset-y-0 left-0 w-[300px] bg-gradient-to-r from-[#000510] to-transparent z-10" />
+      <div className="absolute inset-y-0 right-0 w-[300px] bg-gradient-to-l from-[#000510] to-transparent z-10" />
+      
       {/* Scrolling container */}
-      <motion.div
-        ref={scrollRef}
-        className="relative flex items-center sm:gap-16 gap-8 md:gap-32 flex-wrap justify-around whitespace-nowrap py-8 overflow-hidden"
+      <motion.div 
+        ref={scrollRef} 
+        className="relative flex items-center justify-around gap-32 whitespace-nowrap py-8"
         animate={controls}
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
@@ -76,7 +76,7 @@ export function PartnerLogos() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: 'spring', stiffness: 300, damping: 10 }}
           >
-            <div className="relative w-24 h-12 sm:w-36 sm:h-20 md:w-48 md:h-24 bg-opacity-10 bg-white rounded-lg p-2 sm:p-4 backdrop-filter backdrop-blur-sm">
+            <div className="relative w-48 h-24 bg-opacity-10 bg-white rounded-lg p-4 backdrop-filter backdrop-blur-sm">
               <Image
                 src={partner.logo}
                 alt={partner.name}
