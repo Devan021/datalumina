@@ -233,6 +233,11 @@
   animation-delay: 1s;
 }
 
+.logo-ticker-image{
+  @apply h-8 w-auto;
+
+}
+
 @keyframes dot-flashing {
   0% {
     background-color: #3b82f6;
