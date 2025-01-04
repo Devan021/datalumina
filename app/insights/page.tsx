@@ -3,6 +3,8 @@ import { Header } from '@/components/Header'
 import { InsightsHero } from '@/components/InsightsHero'
 import { InsightsList } from '@/components/InsightsList'
 import { Footer } from '@/components/Footer'
+import {SunMediumIcon as Medium} from 'lucide-react'
+import {MediumBlogPosts } from '@/components/MediumBlogPosts'
 
 export const metadata = {
   title: 'Insights | Hollerlabs',
@@ -24,6 +26,20 @@ export default function InsightsPage() {
           <Suspense fallback={<div>Loading...</div>}>
             <InsightsList />
           </Suspense>
+
+         <section className="py-16 px-4">
+          <div className='max-w-7xl mx-auto'>
+            <div className='flex items-center mb-8'>
+              <h2 className='text-3xl font-bold text-white mr-4'>
+                Latest from our Blog
+              </h2>
+              <Medium className='w-8 h-8 text-white'/>
+            </div>
+            <Suspense fallback={<div>Loading blog posts...</div>}>
+                <MediumBlogPosts/>
+            </Suspense>
+          </div>
+         </section>
         </div>
       </main>
       <Footer />

@@ -3,8 +3,9 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft, Twitter, Linkedin, LinkIcon } from 'lucide-react'
 import { useState, useEffect } from 'react'
+import { Button } from "@/components/ui/button"
 
 interface InsightDetailProps {
   title: string
@@ -17,34 +18,31 @@ interface InsightDetailProps {
   }
   content: string
   image: string
+  isMediumPost?: boolean
+  mediumContent?: string
 }
 
-export function InsightDetail({ title, category, date, author, content, image }: InsightDetailProps) {
+export function InsightDetail({ title, category, date, author, content, image, isMediumPost, mediumContent }: InsightDetailProps) {
   const [currentUrl, setCurrentUrl] = useState('')
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setCurrentUrl(window.location.href)
-    }
+    setCurrentUrl(window.location.href)
   }, [])
 
-  const handleTwitterShare = () => {
-    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-      `${title} - ${currentUrl}`
-    )}`
-    window.open(twitterUrl, '_blank')
-  }
-
-  const handleLinkedInShare = () => {
-    const linkedInUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
-      currentUrl
-    )}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(content)}`
-    window.open(linkedInUrl, '_blank')
-  }
-
-  const handleCopyLink = () => {
-    navigator.clipboard.writeText(currentUrl)
-    alert('Link copied to clipboard!')
+  const handleShare = (platform: 'twitter' | 'linkedin' | 'copy') => {
+    const shareText = `${title} - ${currentUrl}`
+    switch (platform) {
+      case 'twitter':
+        window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`, '_blank')
+        break
+      case 'linkedin':
+        window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(currentUrl)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(content)}`, '_blank')
+        break
+      case 'copy':
+        navigator.clipboard.writeText(currentUrl)
+        alert('Link copied to clipboard!')
+        break
+    }
   }
 
   return (
@@ -93,11 +91,15 @@ export function InsightDetail({ title, category, date, author, content, image }:
               </div>
 
               <div className="prose prose-invert max-w-none">
-                {content.split('\n\n').map((paragraph, index) => (
-                  <p key={index} className="text-gray-300 mb-4 leading-relaxed">
-                    {paragraph.trim()}
-                  </p>
-                ))}
+                {isMediumPost && mediumContent ? (
+                  <div dangerouslySetInnerHTML={{ __html: mediumContent }} />
+                ) : (
+                  content.split('\n\n').map((paragraph, index) => (
+                    <p key={index} className="text-gray-300 mb-4 leading-relaxed">
+                      {paragraph.trim()}
+                    </p>
+                  ))
+                )}
               </div>
             </div>
 
@@ -108,24 +110,33 @@ export function InsightDetail({ title, category, date, author, content, image }:
                     Share this article
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    <button
-                      onClick={handleTwitterShare}
-                      className="px-4 py-2 bg-blue-500/10 hover:bg-blue-500/20 text-blue-300 rounded-full transition-colors"
+                    <Button
+                      onClick={() => handleShare('twitter')}
+                      variant="outline"
+                      size="sm"
+                      className="flex items-center"
                     >
+                      <Twitter className="mr-2 h-4 w-4" />
                       Twitter
-                    </button>
-                    <button
-                      onClick={handleLinkedInShare}
-                      className="px-4 py-2 bg-blue-500/10 hover:bg-blue-500/20 text-blue-300 rounded-full transition-colors"
+                    </Button>
+                    <Button
+                      onClick={() => handleShare('linkedin')}
+                      variant="outline"
+                      size="sm"
+                      className="flex items-center"
                     >
+                      <Linkedin className="mr-2 h-4 w-4" />
                       LinkedIn
-                    </button>
-                    <button
-                      onClick={handleCopyLink}
-                      className="px-4 py-2 bg-blue-500/10 hover:bg-blue-500/20 text-blue-300 rounded-full transition-colors"
+                    </Button>
+                    <Button
+                      onClick={() => handleShare('copy')}
+                      variant="outline"
+                      size="sm"
+                      className="flex items-center"
                     >
+                      <LinkIcon className="mr-2 h-4 w-4" />
                       Copy Link
-                    </button>
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -136,3 +147,4 @@ export function InsightDetail({ title, category, date, author, content, image }:
     </article>
   )
 }
+
